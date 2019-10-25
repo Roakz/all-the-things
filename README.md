@@ -78,7 +78,7 @@ Stripe is a proffesional full-package checkout system API for accepting customer
 
 Stripe API has many options including one off, subscriptions and even splitting payment and fees for fullscale market place sites that require payment to go to the sellers aswell.
 
-<h2>Planning</h2>
+<h2>3.Planning</h2>
 
 All aspects of the app will be planned out before writing code to ensure a structured and focused approach. I will Use Trello to assit in Managing the flow of the project and to keep things focused.
 
@@ -100,7 +100,7 @@ Pictures of all of the Above will be posted here.
 **Sitemap**
 **Trello Project Management**
 
-<h2>Database</h2>
+<h2>4.Database</h2>
 
 The app contains a relational database system using postgresql and rails to create the appropriate migragtions of database queries. 
 
