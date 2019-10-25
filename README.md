@@ -1,4 +1,4 @@
-<h1>Manly Things</h1>
+<h1>All The Things</h1>
 
 
 - link to URL deployed app
