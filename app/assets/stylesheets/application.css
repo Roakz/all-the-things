@@ -13,3 +13,66 @@
  *= require_tree .
  *= require_self
  */
+
+ html{
+     background-color:black;
+ }
+
+ body{
+     margin:0px;
+ }
+
+ /* Setting the background colour of the app to black */
+ #whole-body-wrapper{
+     background-color: black;
+     min-height: 100vh;
+     margin: 0;
+ }
+
+ a{
+     font-family: 'Rakkas', cursive;
+     text-decoration: none;
+ }
+ a:visited{
+    color:black;
+ }
+
+ #fixed-head{
+     /* Setting the background of the head for the whole aplication */
+    background-color: white;  
+    min-height: 15vh;  
+    border-radius: 10px;
+    margin: 15px;
+    
+    /* Display properties for the fixed head */
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+ }
+
+  /* set the font for the H1 within head */
+ #head-h1{
+    font-family: 'Rakkas', cursive;
+    color:black;
+    font-size: 6rem;
+    padding:0;
+    margin: 0px;
+    
+ }
+
+ /* Button styling within the head */
+ .head-button{
+    border: none;
+    background-color: #FA7841;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 16px;
+    font-size:3rem;
+ }
+

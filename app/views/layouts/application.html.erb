@@ -1,15 +1,58 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ManlyThings</title>
+    <title>All The Things</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link href="https://fonts.googleapis.com/css?family=Rakkas&display=swap" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <!-- Whole body wrapper. Will be minimum full view height -->
+    <div id= "whole-body-wrapper">
+      <header>
+
+        <!-- Devise Flash Messages -->
+        <!-- <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p> -->
+
+        <!-- This is the main head picture and signin/up and logout buttons displayed on all pages-->
+        <div id="fixed-head">
+
+          <!-- Main  heading -->
+          <h1 id="head-h1">All The Things</h1>
+
+          
+          <!-- Button container -->
+          <div id="button-div">
+
+            <!-- Logic to only display the signup/in if there is no session -->
+            <% if ! user_signed_in? %>
+
+              <!-- Sign up button -->
+              <button class="head-button">
+                <%= link_to "Join Us!", new_user_registration_path %>
+              </button>
+
+              <!-- Login Button -->
+              <button class="head-button">
+                <%= link_to "Login", new_user_session_path %>
+              </button>
+            <% end %>
+            
+            <!-- Logout button -->
+            <button class="head-button">
+              <%= link_to "Logout", destroy_user_session_path(current_user), method: "delete" %>
+            </button>
+
+          </div>
+
+        </div>
+
+      </header>
     <%= yield %>
+    </div>
   </body>
 </html>
