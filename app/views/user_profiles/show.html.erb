@@ -1,2 +1,13 @@
+<div class="all-cards" id="profile-card">
 
+    <!-- Setting the dshboard heading to the current user -->
+    <h1 id="profile-heading">Your Dashboard <%= current_user.user_profile.name %>!</h1>
+    
+    <!-- Profile image and content rendered here -->
+    <div id="profile-wrap">
+    <div id="user-image"></div>
+    <div id="profile-content"><p><%= current_user.user_profile.content %></p></div>
+    </div>
+
+</div>
 

@@ -2,7 +2,7 @@
 <div id="edit-form-card" class="all-cards">
 
         <!-- initialising the rails form helper to render the html form -->
-        <%= form_with model: user_profile, local: true do |edit_user| %>
+        <%= form_with model: user_profile, method: "patch", local: true do |edit_user| %>
         
         <div class="form-field">
         <!-- The name field label and text input field -->

@@ -1,15 +1,21 @@
 class UserProfilesController < ApplicationController
 
   def show
+
   end
 
   def edit
     @user_profile = current_user.user_profile
   end
 
+  # fix me!!
   def update
-    @user_profile = current_user.update_user_profile(profile_params)
-    @user_profile = current_user.user_profile.image.attach(:profile_image)
+    @user_profile = current_user.user_profile.update(profile_params)
+    if current_user.user_profile.profile_image
+    current_user.user_profile.profile_image.purge
+    end
+    @user_profile = current_user.user_profile.profile_image.attach(profile_params[:profile_image])
+    redirect_to user_profile_path(current_user)
   end
 
   def destroy

@@ -73,3 +73,47 @@
     margin:0;
 }
 
+// THIS IS THE START OF THE USER PROFILE PAGE I.E UserProfiles#show
+
+#profile-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:center;
+}
+
+// Controls the display of the image and the content via flexbox, padding added for visual enhancement
+#profile-wrap{
+    display:flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+// users profile image div placeholder when no image present
+#user-image{
+    height: 400px;
+    width: 400px;
+    background-color: grey;
+    padding: 10px;
+    margin: 10px;
+}
+
+#profile-heading{
+    font-size: 4rem;
+}
+
+// profile content div
+#profile-content{
+    // size of div is set
+    height: 400px;
+    width:400px;
+
+    // Setting the font family and size 
+    font-family: 'Rakkas', cursive;
+    font-size: 2rem;
+
+    // padding and margin added for visual enhancement 
+    padding: 10px;
+    margin: 10px;
+    margin-top: 0px;
+}
