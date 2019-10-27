@@ -1,3 +1,55 @@
 // Place all the styles related to the UserProfiles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+ 
+#edit-form-card{
+    // content display and alignment
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; 
+    align-items: center;
+    
+    // padding for visual enhancement around borders of card
+    padding: 20px;
+    min-height: 50vh;
+   
+}
+
+.form-field{
+    // setting form font sizes
+    font-family: 'Rakkas', cursive;
+    font-size: 3.5rem;
+
+    // display properties within the form field divs for alignment
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+
+    // padding and margins for spacing
+    padding: 30px;
+}
+
+// form input field & file upload styling
+#user_profile_name{
+        height:50px;
+        width: 80%;
+        border: solid black 3px;
+}
+
+#user_profile_content{
+    height:300px;
+    width:80%;
+    border: solid black 3px
+}
+
+#file-upload{
+   
+   font-size:2.5rem;
+   width: 405;
+   margin-left: 300px;
+   margin-bottom: 70px;
+  
+}
+
+
