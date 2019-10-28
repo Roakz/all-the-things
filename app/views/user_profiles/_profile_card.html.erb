@@ -1,0 +1,20 @@
+<div class="all-cards" id="profile-card">
+
+        <!-- Setting the dshboard heading to the current user -->
+        <h1 id="profile-heading">Your Dashboard <%= current_user.user_profile.name %>!</h1>
+        
+        <!-- Profile image and content rendered here -->
+
+        <div id="profile-wrap">
+            <% if model.profile_image %>
+              <%= image_tag model.profile_image, width:400 ,height:400, id: "profile-image" %>
+            <% else %>
+              <div id="user-image"><p>Placeholder</p></div>
+            <% end %>
+
+        <div id="profile-content"><p><%= current_user.user_profile.content %></p></div>
+        </div>
+         <!-- links to the edit form for the user profile -->
+        <%= link_to "Edit", edit_user_profile_path(current_user) %>
+    
+    </div>

@@ -1,0 +1,39 @@
+<!-- for wrapper div for styling -->
+<div id="edit-form-card" class="all-cards">
+
+        <!-- initialising the rails form helper to render the html form -->
+        <%= form_with model: shop, url: path, method: verb, local: true do |shop_form| %>
+        
+        <div class="form-field">
+            <!-- The name field label and text input field -->
+            <%= shop_form.label :name, "Shop name" %><br>
+            <%= shop_form.text_field :name %>
+        </div>
+
+        <div class="form-field">
+            <!-- The content field label and text area input -->
+            <%= shop_form.label :hook, "A quik hook to appeal to sellers!" %><br>
+            <%= shop_form.text_area :hook %>
+            </div>
+        
+        <div class="form-field">
+            <!-- The content field label and text area input -->
+            <%= shop_form.label :content, "Shop profile content" %><br>
+            <%= shop_form.text_area :content%>
+        </div>
+      
+        <div class="form-field">
+          <!-- file attachment field for uploading the shop image. :shop_image is
+          referenced as attached in the model -->
+          <%= shop_form.label :shop_image, "Shop Image Uplaod" %><br>
+          <%= shop_form.file_field :shop_image, id: "file-upload" %>
+        </div>
+        
+        <div class="form-field">
+          <!-- The form submit button -->
+          <%= shop_form.submit "GO!", class: "head-button" %>
+        </div>
+      
+        <% end %>
+      
+      </div>

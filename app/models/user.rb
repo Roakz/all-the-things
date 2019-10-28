@@ -7,4 +7,5 @@ class User < ApplicationRecord
   has_one :cart, dependent: :destroy
   before_create :build_user_profile
   before_create :build_cart
+  has_one :shop, dependent: :destroy
 end

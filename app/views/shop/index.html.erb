@@ -1,0 +1,3 @@
+<% @user.each do |user| %>
+<%= render "shop_card", shop: user.shop, users_id: user.id %>
+<% end %>

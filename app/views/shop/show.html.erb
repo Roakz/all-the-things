@@ -1,0 +1,12 @@
+<!-- rendering shop card from the partial shop_card -->
+<%= render "shop_card", shop: @shop, users_id: @shop.user %>
+
+<!-- Shop content -->
+<div class="all-cards" id="shop-content-card">
+    <div id="shop-content-head">
+    <h1>About</h1>
+    <p id="shop-content"><%= @shop.content %></p>
+    <% if params[:user_id].to_i == current_user.id %>
+    <%= link_to "edit", edit_user_shop_path(current_user), id: "edit-link" %></div>
+    <% end %>
+</div>

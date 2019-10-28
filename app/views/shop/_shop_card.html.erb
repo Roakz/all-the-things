@@ -1,0 +1,15 @@
+<div class="all-cards" id="shop-card">
+        <div id="heading-view">
+            <h1><%= shop.name %></h1>
+            <%= link_to "View", user_shop_path(users_id, shop.id) %> 
+        </div>
+        <% if shop.shop_image %>
+        <%= image_tag shop.shop_image, width:900, height: 400, id: "shop-picture" %>
+        <% else %>
+        <div id="shop-image-placeholder" ><H1>Placeholder</H1></div>
+        <% end %>
+        <div id="shop-hook">
+            <%= shop.hook %>
+        </div>
+        
+    </div>

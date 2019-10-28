@@ -1,0 +1,116 @@
+// Place all the styles related to the shop controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// THIS IS FOR THE SHOP CREATE FORM
+#edit-form-card{
+    .form-field{
+        padding-right:0px;
+    }
+
+    #shop_name{
+        height:60px;
+        width: 80%;
+        border: solid black 3px;
+        background-color: #DAD6D6; 
+        border-radius: 10px;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    #shop_hook{
+        height:100px;
+        width:80%;
+        border: solid black 3px;
+        background-color: #DAD6D6; 
+        border-radius: 10px;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+    
+    #shop_content{
+        height:300px;
+        width:80%;
+        border: solid black 3px;
+        background-color: #DAD6D6; 
+        border-radius: 10px;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+}
+
+// SHOP SHOW PAGE STYLING
+
+#shop-picture{
+    border: solid black 3px;
+}
+
+#shop-card{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#heading-view{
+    display:flex;
+    justify-content: space-between;
+    width: 95%;
+    a{
+        margin:10px;
+        font-size: 3rem;
+    }
+    h1{
+        font-size: 4rem;
+        margin:10px;
+    }
+}
+#shop-hook{
+    font-size: 3rem;
+    width: 95%;
+}
+#shop-content{
+    text-align:center;
+    margin-top: 0;
+    padding: 15px;
+    margin-bottom: 0px;
+    font-size: 1.6rem;
+}
+#shop-content-card{
+    h1{
+        padding:10px;
+        margin: 5px;
+    }
+    a{
+        font-size: 3rem;
+        color: blue;
+    }
+  
+}
+#edit-link{
+    width: 95%;
+    display:flex;
+    justify-content: center;
+    padding: 10px;
+    padding-bottom: 25px;
+}
+
+#shop-image-placeholder{
+    width: 900px;
+    height: 400px;
+    background-color: grey;
+    h1{
+        font-size: 3rem;
+    }
+}
+
+// EDIT FORM VIEW STYLING
+#edit-heading{
+    min-height: 0;
+    h1{
+        font-size:4rem;
+        padding:30px;
+        margin: 0;
+        width:95%;
+        text-align:center;
+    }
+}

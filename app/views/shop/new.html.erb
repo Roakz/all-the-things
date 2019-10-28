@@ -1,0 +1,7 @@
+<!-- Rendering a heading for the form styled the same as the previous form headings --> 
+<!-- Using the same card for most things as is shown below here  -->
+
+<div class="all-cards" id="profile-form-heading-card">
+    <h1 id="profile-form-heading">Create Your Shop</h1>
+</div>
+<%= render "new_form", shop: @shop, path: user_shop_index_path, verb: "post" %>

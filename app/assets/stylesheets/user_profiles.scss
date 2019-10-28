@@ -80,6 +80,12 @@
     flex-direction: column;
     justify-content: space-around;
     align-items:center;
+
+    a{
+        font-size: 3rem;
+        width: 90%;
+        padding-bottom: 15px;
+    }
 }
 
 // Controls the display of the image and the content via flexbox, padding added for visual enhancement
@@ -96,6 +102,13 @@
     background-color: grey;
     padding: 10px;
     margin: 10px;
+    border: solid black 3px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    p{
+        font-size: 3rem;
+    }
 }
 
 #profile-heading{
@@ -117,3 +130,19 @@
     margin: 10px;
     margin-top: 0px;
 }
+
+#profile-image{
+    border: solid black 3px;
+}
+
+// DASBOARD/ PROFILE PRAGE LINKS CARD STYLING
+#profile-links{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    a{
+        font-size: 3.5rem;
+        color: blue;
+    }
+}
+
