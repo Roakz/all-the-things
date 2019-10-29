@@ -11,17 +11,5 @@
     <% end %>
 </div>
 
-<% @shop.items.each do |item| %>
-<div class="all-cards">
-    <h1><%= item.name %></h1>
-
-    <% if item.item_picture.attached? %>
-      <% image_tag (item.item_picture), width:900, height: 400, id: "shop-picture" %>
-    <% else %>
-      <div id="shop-image-placeholder" ><H1>Placeholder</H1></div>
-    <% end %>
-
-    <p><%= item.hook %></p>
-
-</div>
-<% end %>
+<!-- Rendering the item cards -->
+<%= render "item_card", shop: @shop %>

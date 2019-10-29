@@ -25,4 +25,18 @@
     font-weight: bold;
 }
 
+// ITEMS CARD
+
+#item-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    h1{
+        font-size:4rem;
+    }
+    p{
+        font-size:3rem;
+    }
+}
 
