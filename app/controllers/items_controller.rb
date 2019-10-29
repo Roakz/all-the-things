@@ -9,6 +9,7 @@ class ItemsController < ApplicationController
 
   def create
     @item = current_user.shop.items.create(item_params)
+    current_user.shop.items.item_picture.attach(params[:item_picture])
     @category = params[:category]
     @item.categories.create(name: @category)
 
@@ -31,6 +32,6 @@ class ItemsController < ApplicationController
 
   private 
   def item_params
-    params.require(:item).permit(:name, :quantity, :hook, :content, :price)
+    params.require(:item).permit(:name, :quantity, :hook, :content, :price, :item_picture)
   end
 end

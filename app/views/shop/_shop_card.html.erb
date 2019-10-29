@@ -1,7 +1,12 @@
 <div class="all-cards" id="shop-card">
         <div id="heading-view">
             <h1><%= shop.name %></h1>
+            <% unless current_page? user_shop_path(users_id, shop.id) %>
             <%= link_to "View", user_shop_path(users_id, shop.id) %> 
+            <% end %>
+            <% if current_page? user_shop_path(users_id, shop.id) %>
+            <%= link_to "Add an Item", new_user_shop_item_path(current_user, params[:id]) %>
+            <% end %>
         </div>
         <% if shop.shop_image.attached? %>
         <%= image_tag (shop.shop_image), width:900, height: 400, id: "shop-picture" %>
