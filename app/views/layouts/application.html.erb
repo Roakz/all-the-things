@@ -14,9 +14,29 @@
     <div id= "whole-body-wrapper">
       <header>
 
+        <!-- Nav bar -->
+        <nav class="nav-bar">
+          <% if current_page?(root_path) %>
+          <div class="nav-link"><%= link_to "All the things", root_path, style:"color:white" %></div>
+          <% else %>
+          <div class="nav-link"><%= link_to "Home", root_path, style: "color:white" %></div>
+          <% end %>
+          <% if user_signed_in? %>
+          <div class="nav-link" id="dash-cart"><%= link_to "Dashboard", user_profile_path(current_user), style: "color:white"  %>
+          <%= link_to "Cart", root_path, style: "color:white" %></div>
+          <% end %>
+        </nav>
+
         <!-- Devise Flash Messages -->
-        <!-- <p class="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p> -->
+        <% if notice %>
+          <p class="notice"><%= notice %></p>
+        <% end %>
+        <% if alert %>
+          <p class="alert"><%= alert %></p>
+        <% end %>
+        <% if flash[:alert] %>
+          <p class="alert"><%= flash[:alert] %></p>
+        <% end %>
 
         <!-- This is the main head picture and signin/up and logout buttons displayed on all pages-->
         <div id="fixed-head" class="all-cards">

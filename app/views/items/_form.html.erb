@@ -1,0 +1,51 @@
+<div class="all-cards" id="edit_form_card"%>
+
+    <!-- initialising the rails form helper to render the html form -->
+    <%= form_with model: item, method: verb, url: path, local: true do |item_form| %>
+           
+    <div class="form-field">
+        <!-- The name field label and text input field -->
+        <%= item_form.label :name, "Item name" %><br>
+        <%= item_form.text_field :name, class: "input-field"%>
+    </div>
+   
+    <div class="form-field">
+        <!-- The hook field label and text area input -->
+        <%= item_form.label :hook, "A quik hook to appeal to sellers!" %><br>
+        <%= item_form.text_area :hook, class: "input-field" %>
+        </div>
+    
+    <div class="form-field">
+        <!-- The content field label and text area input -->
+        <%= item_form.label :content, "Item details" %><br>
+        <%= item_form.text_area :content%>
+    </div>
+   
+    <div class="form-field">
+       <!-- The content field label and text area input -->
+       <%= item_form.label :price, "very nice...how much?" %><br>
+       <%= item_form.number_field :price, step: :any, class: "input-field" %>
+   </div>
+   
+   <div class="form-field">
+       <!-- The category field label and text area input -->
+       <%= item_form.label :category, "Category!" %><br>
+       <%= item_form.text_area :category, class: "input-field" %>
+   </div>
+   
+   
+    <div class="form-field">
+      <!-- file attachment field for uploading the shop image. :item_image is
+      referenced as attached in the model -->
+      <%= item_form.label :item_image, "Item Image Uplaod" %><br>
+      <%= item_form.file_field :shop_image, id: "file-upload" %>
+    </div>
+    
+    <div class="form-field">
+      <!-- The form submit button -->
+      <%= item_form.submit "GO!", class: "head-button" %>
+    </div>
+   
+    <% end %>
+   
+   </div>

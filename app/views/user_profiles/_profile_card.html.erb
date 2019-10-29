@@ -6,7 +6,7 @@
         <!-- Profile image and content rendered here -->
 
         <div id="profile-wrap">
-            <% if model.profile_image %>
+            <% if model.profile_image.attached? %>
               <%= image_tag model.profile_image, width:400 ,height:400, id: "profile-image" %>
             <% else %>
               <div id="user-image"><p>Placeholder</p></div>

@@ -1,3 +1,4 @@
 class Category < ApplicationRecord
-    has_and_belongs_to_many :items
+    has_many :items_category
+    has_many :items, through: :items_category
 end

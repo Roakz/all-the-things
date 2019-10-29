@@ -114,3 +114,72 @@
         text-align:center;
     }
 }
+// \INDEX PAGE SEARCH BOX!
+
+// Form search field
+#search{
+    height:60px;
+    width: 90%;
+    border: solid black 3px;
+    background-color: #DAD6D6; 
+    border-radius: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+// field wrapper div
+#search-field-div{
+    width:70%;
+}
+// The form itself
+#search-form{
+    
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    width:95%;
+    padding-right:40px;
+}
+// the wrapper div around the form
+#search-div{
+    display:flex;
+    justify-content: center;
+}
+#search-button-wrap{
+    padding-right: 20px;
+}
+#search-heading{
+    font-size: 1.5rem;
+    text-align: center;
+    min-height: 0;
+    h1{
+        margin:0;
+    }
+}
+
+// CATEGORY CARD
+#category-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#category-button{
+    margin: 25px;
+}
+
+// WELCOME CARD
+#welcome-card{
+    h1{
+        margin:0;
+        margin-left: 25px;
+        padding-top: 30px;
+        font-size: 4rem;
+    }
+    p{
+        margin:10px;
+        font-size:1rem;
+        padding:15px;
+        padding-top: 0;
+        padding-bottom: 40px;
+    }
+}

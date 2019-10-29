@@ -1,3 +1,24 @@
-<% @user.each do |user| %>
-<%= render "shop_card", shop: user.shop, users_id: user.id %>
+ <!-- Rendering the seach form -->
+<div class="all-cards" id="search-heading">
+    <h1>Search Shop Name</h1>
+</div>
+<%= render "search_form" %>   
+    
+    <!-- The category browse card -->
+    <div class="all-cards" id="category-card">
+        <h1 id="profile-form-heading">Categories</h1>
+        <%= link_to "Browse", root_path, class: "head-button", id: "category-button" %>
+    </div>
+
+<!-- All the things welcome card -->
+<div class="all-cards" id="welcome-card">
+        <h1>About Us!</h1>
+        <p>Welcome to all the things. If you want to buy all the things or maybe sell all the things 
+            you have come to the right place !!! Enjoy your visit and happy shopping !!
+        </p>
+    </div>
+
+<!-- rendering the shop cards passed from controller based on seach parameters if nill or false returns all -->
+<% @shop.each do |shop| %>
+<%= render "shop_card", shop: shop, users_id: shop.user.id %>
 <% end %>

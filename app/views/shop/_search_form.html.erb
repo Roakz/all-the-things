@@ -1,0 +1,13 @@
+<!-- Search form -->
+<div class="all-cards" id="search-div">
+        
+        <%= form_tag shop_index_path, method: "get", id: "search-form" do %>
+          <div  class="form-field" id="search-field-div">
+            <%= text_field_tag :search, params[:search] %>
+          </div>
+          <div id="search-button-wrap">
+            <%= submit_tag 'Search', name: nil, class: "head-button" %>
+          </div>
+        <% end %>
+    
+    </div>

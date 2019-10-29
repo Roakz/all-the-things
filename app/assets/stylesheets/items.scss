@@ -1,0 +1,28 @@
+// Place all the styles related to the Items controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// THE ITEMS NEW FORM STARTS HERE
+
+.input-field{
+    height:60px;
+    width: 80%;
+    border: solid black 3px;
+    background-color: #DAD6D6; 
+    border-radius: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+
+#item_content{
+    height:300px;
+    width:80%;
+    border: solid black 3px;
+    background-color: #DAD6D6; 
+    border-radius: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+

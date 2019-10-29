@@ -1,7 +1,10 @@
 class ShopController < ApplicationController
 
+  before_action :authenticate_user!
+  skip_before_action :authenticate_user!, only: [:index]
+
   def index
-    @user = User.all
+      @shop = Shop.where('name LIKE ?', "%#{params[:search]}%")
   end
   
   def show

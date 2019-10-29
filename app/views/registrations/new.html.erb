@@ -1,4 +1,8 @@
-<h2>Sign up</h2>
+<div class="all-cards" style="min-height:0;">
+    <h1 style="font-size:5rem; text-align:center; margin:5px;">Create an account!</h1>
+  </div>
+
+<div class="all-cards" id="edit-form-card">
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
@@ -22,8 +26,9 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Sign up!", class: "head-button" %>
   </div>
 <% end %>
+</div>
 
-<%= render "devise/shared/links" %>
+

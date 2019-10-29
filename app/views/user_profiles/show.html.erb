@@ -3,11 +3,11 @@
 
 <!-- Links card probly to small to warrant a partial -->
 <div class="all-cards" id="profile-links">
-<%= link_to "Go Shopping", root_path %>
-<% if current_user.shop %>
-<%= link_to "View/Edit Shop", user_shop_path(current_user, current_user.shop) %>
-<% end %>
-<%= link_to "Create shop", new_user_shop_path(current_user.user_profile.id)  %>
-
+  <%= link_to "Go Shopping", root_path %>
+  <% if current_user.shop %>
+    <%= link_to "View/Edit Shop", user_shop_path(current_user, current_user.shop) %>
+  <% else %>
+    <%= link_to "Create shop", new_user_shop_path(current_user.user_profile.id)  %>
+  <% end %>
 </div>
 

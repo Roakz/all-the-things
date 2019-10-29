@@ -1,5 +1,7 @@
 class UserProfilesController < ApplicationController
 
+  before_action :authenticate_user!
+
   def show
     @model = current_user.user_profile
   end
@@ -22,6 +24,7 @@ class UserProfilesController < ApplicationController
   def profile_params
   params.require(:user_profile).permit(:name, :content, :profile_image)
   end
+
   
 end
 
