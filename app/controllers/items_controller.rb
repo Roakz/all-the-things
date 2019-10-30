@@ -9,23 +9,23 @@ class ItemsController < ApplicationController
   end
 
   def create
-    @item = current_user.shop.items.new(item_params)
+    
+    @item = current_user.shop.items.create(item_params)
     current_user.shop.items.last.item_picture.attach(params[:item_picture])
-    @category = params[:category]
+    
+    category = Category.where(name: category_params[:category][:name])
 
-    if Category.where(name: @category)
-      @item.categories << Category.where(name: @category)
-    else
-    @item.categories.create(name: @category)
+    if !  category[0] 
+    category = Category.create(name: category_params[:category][:name])
     end
 
-    @item.save
+    @item.categories.push(category)  
 
-    if @item.save 
-      redirect_to user_shop_path(current_user, params[:shop_id])
+    if @item.save(item_params) 
+      redirect_to user_shop_path(current_user.id, current_user.shop.id)
     else
       flash[:alert] = @item.errors.full_messages.to_sentence
-      redirect_to new_user_shop_item_path
+      redirect_to new_user_shop_item_path(current_user.id, current_user.shop.id, @item.id)
     end
   end
 
@@ -34,11 +34,13 @@ class ItemsController < ApplicationController
   end
 
   def update
-    # render json: item_params 
-    # return
-
+    
     @item = Item.find(params[:id])
-    category = Category.where(name: category_params[:name]) || Category.create!(name: category_params[:name])
+    category = Category.where(name: category_params[:category][:name]) 
+    if ! category[0]
+    Category.create(name: category_params[:category][:name])
+    end
+
     @item.categories.push(category)
 
     if @item.update(item_params)
