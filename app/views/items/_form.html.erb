@@ -1,4 +1,4 @@
-<div class="all-cards" id="edit_form_card"%>
+<div class="all-cards" id="edit_form_card">
 
     <!-- initialising the rails form helper to render the html form -->
     <%= form_with model: item, method: verb, url: path, local: true do |item_form| %>
@@ -27,11 +27,14 @@
        <%= item_form.number_field :price, step: :any, class: "input-field" %>
    </div>
    
-   <div class="form-field">
-       <!-- The category field label and text area input -->
-       <%= item_form.label :category, "Category!" %><br>
-       <%= item_form.text_area :category, class: "input-field" %>
-   </div>
+    <%= item_form.fields_for :category do |f| %>
+
+    <div class="form-field">
+     <%= f.label :name, "Category!" %>
+     <%= f.text_area :name, class: "input-field" %>
+    </div>
+
+    <% end %>
    
    
     <div class="form-field">

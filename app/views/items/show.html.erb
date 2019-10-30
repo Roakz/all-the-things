@@ -1,2 +1,9 @@
-<h1>Items#show</h1>
-<p>Find me in app/views/items/show.html.erb</p>
+<%= render "item-card", item: @item %>
+
+<div class="all-cards" id="item-content-card">
+
+    <h1>Details</h1>
+
+    <p><%= @item.content %></p>
+
+</div>

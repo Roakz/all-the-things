@@ -1,0 +1,32 @@
+#category-heading-card {
+  min-height: 0;
+  text-align: center;
+}
+
+#category-heading-card h1 {
+  margin: 0;
+  font-size: 5rem;
+}
+
+#category-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#category-links a {
+  font-size: 3rem;
+  color: blue;
+  text-decoration: underline;
+}
+/*# sourceMappingURL=categories.css.map */

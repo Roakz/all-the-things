@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// CATEGORY HEADING CARD
 #category-heading-card{
 
     min-height: 0;
@@ -11,4 +12,20 @@
         margin: 0;
         font-size:5rem;
     }
+}
+
+// CATEGORY LINKS DIV
+#category-links{
+
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items:center;
+
+    a{
+        font-size: 3rem;
+        color: blue;
+        text-decoration: underline;
+    }
+
 }

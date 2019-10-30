@@ -3,4 +3,5 @@ class Item < ApplicationRecord
   belongs_to :shop
   has_many :items_category
   has_many :categories, through: :items_category
+  accepts_nested_attributes_for :categories
 end

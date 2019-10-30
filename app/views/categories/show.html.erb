@@ -1,2 +1,5 @@
-<h1>Categories#show</h1>
-<p>Find me in app/views/categories/show.html.erb</p>
+<div class="all-cards" id="category-links"><%= link_to "Back to categories", :back %></div>
+<div class="all-cards" id="category-heading-card"><h1><%= @category.name %></h1></div>
+<%= render "shop/item_card", shop: @category %>
+
+

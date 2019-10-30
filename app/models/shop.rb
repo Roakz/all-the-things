@@ -1,6 +1,6 @@
 class Shop < ApplicationRecord
   belongs_to :user
-  has_many :items
+  has_many :items, dependent: :destroy
   has_one_attached :shop_image
 
   def self.search(search)

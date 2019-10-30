@@ -1,2 +1,1 @@
-<h1>Items#edit</h1>
-<p>Find me in app/views/items/edit.html.erb</p>
+<%= render "form", verb: "patch", item: @item, path: user_shop_item_path(current_user, @item.shop.id, @item.id) %>

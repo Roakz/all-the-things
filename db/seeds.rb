@@ -20,3 +20,17 @@ end
 User.all.each do |user|
     user.create_shop(name:"Test Shop", hook:"Buy My Stuff", content:"We are a really cool shop and we sell so much stuff thats it just so amazing WOW! no words!")
 end
+
+# Shop items
+
+User.all.each do |user|
+    user.shop.items.create(name: "Test item", quantity: "10", price: 3.20, hook: "Test item buy me", content: "Test content Test content Test content Test content Test content Test content Test contentTest contentTest contentTest contentTest contentTest content")
+end
+
+# Item categories
+
+User.all.each do |user|
+    user.shop.items.each do |item|
+        item.categories.create(name:"Test category")
+    end
+end

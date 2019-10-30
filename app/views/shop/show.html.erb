@@ -4,12 +4,14 @@
 <!-- Shop content -->
 <div class="all-cards" id="shop-content-card">
     <div id="shop-content-head">
-    <h1>About</h1>
-    <p id="shop-content"><%= @shop.content %></p>
-    <% if params[:user_id].to_i == current_user.id %>
-    <%= link_to "edit", edit_user_shop_path(current_user), id: "edit-link" %></div>
-    <% end %>
+      <h1>About</h1>
+        <p id="shop-content"><%= @shop.content %></p>
+        <% if params[:user_id].to_i == current_user.id %>
+          <%= link_to "edit", edit_user_shop_path(current_user), id: "edit-link" %></div>
+        <% end %>
+    </div>
+
+    <%= render "item_card", shop: @shop %>
 </div>
 
 <!-- Rendering the item cards -->
-<%= render "item_card", shop: @shop %>

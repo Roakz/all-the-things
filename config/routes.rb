@@ -6,7 +6,7 @@ root "shop#index"
 
 #categories index and show pages get routes
 get 'categories/index'
-get 'categories/show'
+get 'categories/:id', to: "categories#show", as: "categories_show"
 
 #  get root set oustide of the resource and before it so that rails finds it first
 get "shop/index", to:"shop#index"

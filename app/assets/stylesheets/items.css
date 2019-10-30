@@ -1,0 +1,62 @@
+.input-field {
+  height: 60px;
+  width: 80%;
+  border: solid black 3px;
+  background-color: #DAD6D6;
+  border-radius: 10px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+#item_content {
+  height: 300px;
+  width: 80%;
+  border: solid black 3px;
+  background-color: #DAD6D6;
+  border-radius: 10px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+#item-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#item-card h1 {
+  font-size: 4rem;
+}
+
+#item-card p {
+  font-size: 3rem;
+}
+
+#item-content-card {
+  padding: 30px;
+}
+
+#item-content-card p {
+  margin: 0;
+  padding: 10px;
+  font-size: 1.6;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+#item-content-card h1 {
+  font-size: 3.5rem;
+  width: 95%;
+  text-align: center;
+}
+/*# sourceMappingURL=items.css.map */

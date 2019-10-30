@@ -2,3 +2,8 @@
     <h1>Item Categories</h1>
 </div>
 
+<div class="all-cards" id="category-links">
+    <% @categories.each do |category| %>
+    <h1><%= link_to "#{category.name}", categories_show_path(category.id) %></h1>
+    <% end %>
+</div>

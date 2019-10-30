@@ -1,0 +1,167 @@
+#edit-form-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+  min-height: 50vh;
+}
+
+.form-field {
+  font-family: 'Rakkas', cursive;
+  font-size: 3.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px;
+}
+
+#user_profile_name {
+  height: 60px;
+  width: 80%;
+  border: solid black 3px;
+  background-color: #DAD6D6;
+  border-radius: 10px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+#user_profile_content {
+  height: 300px;
+  width: 80%;
+  border: solid black 3px;
+  background-color: #DAD6D6;
+  border-radius: 10px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+#file-upload {
+  font-size: 2.5rem;
+  margin-left: 200px;
+  margin-bottom: 70px;
+}
+
+#profile-form-heading-card {
+  margin-top: 0;
+  min-height: 0;
+  padding: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#profile-form-heading {
+  font-family: 'Rakkas', cursive;
+  font-size: 3.5rem;
+  margin: 0;
+}
+
+#profile-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#profile-card a {
+  font-size: 3rem;
+  width: 90%;
+  padding-bottom: 15px;
+}
+
+#profile-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 30px;
+}
+
+#user-image {
+  height: 400px;
+  width: 400px;
+  background-color: grey;
+  padding: 10px;
+  margin: 10px;
+  border: solid black 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#user-image p {
+  font-size: 3rem;
+}
+
+#profile-heading {
+  font-size: 4rem;
+}
+
+#profile-content {
+  height: 400px;
+  width: 400px;
+  font-family: 'Rakkas', cursive;
+  font-size: 2rem;
+  padding: 10px;
+  margin: 10px;
+  margin-top: 0px;
+}
+
+#profile-image {
+  border: solid black 3px;
+}
+
+#profile-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#profile-links a {
+  font-size: 3.5rem;
+  color: blue;
+}
+/*# sourceMappingURL=user_profiles.css.map */
