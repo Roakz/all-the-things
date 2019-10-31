@@ -83,7 +83,7 @@
     flex-direction: column;
     align-items:center;
     justify-content: center;
-    background-image: image-url("market.jpeg");
+    background-image: url(market.jpeg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
