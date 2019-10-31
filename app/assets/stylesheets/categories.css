@@ -29,4 +29,15 @@
   color: blue;
   text-decoration: underline;
 }
+
+#quantity {
+  font-size: 3rem;
+  height: 75px;
+  width: 75px;
+  border: solid black 3px;
+  font-family: 'Rakkas', cursive;
+  background-color: white;
+  text-align: center;
+  margin: 10px;
+}
 /*# sourceMappingURL=categories.css.map */

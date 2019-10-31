@@ -1,5 +1,5 @@
 <div class="all-cards" id="category-links"><%= link_to "Back to categories", :back %></div>
 <div class="all-cards" id="category-heading-card"><h1><%= @category.name %></h1></div>
-<%= render "shop/item_card", shop: @category %>
+<%= render "shop/item_card", shop: @category, cart_item: @cart_item  %>
 
 

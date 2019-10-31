@@ -8,5 +8,17 @@
         <% end %>
     
         <p><%= item.hook %></p>
+
+        <% if current_user.id == params[:user_id].to_i %>
+        <%= link_to "edit item", edit_user_shop_item_path( item.shop.user, item.shop.id, item.id), style: "font-size:3rem;" "color:blue;" "padding-bottom:30px;" %>
+        <% end %>  
+        
+        <% if current_user.id != params[:user_id].to_i %>
+          <%= form_with model: cart_item, local: true, url: cart_items_path(current_user, current_user.cart.id) do |f| %>
+            <%= f.hidden_field :item_id, value: item.id %>
+            <%= f.number_field(:quantity, in: 1..10, step: 1, value: 1)%>
+            <%= f.submit "Cart +", class: "head-button" %> <br> 
+          <% end %>
+        <% end %>
     
     </div>

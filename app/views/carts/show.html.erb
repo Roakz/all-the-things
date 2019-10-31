@@ -1,0 +1,36 @@
+<div class="all-cards">
+        <h1 style="font-size:5rem; margin:0;">Cart</h1>
+
+    <table class="minimalistBlack">
+        <thead>
+            <td>Item</td>
+            <td>Price</td>
+            <td>Quantity</td>
+            <td>Total</td>
+            <td>Edit</td>
+        </thead>
+        <% @user.cart.cart_items.each do |cart_item| %>
+            <tbody>
+                <tr>
+                    <td><%= cart_item.item %></td>
+                    <td><%= sprintf('%.2f', cart_item.price) %></td>
+                    <td><%= cart_item.quantity %></td>
+                    <td><%=  p sprintf('%.2f', CartItem.item_total((cart_item.quantity).to_d, (cart_item.price).to_d)) %></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        <% end %>
+        
+        <tfoot>
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td  id="cart-total">Total</td>
+              <td  id="cart-total"><%= @user.cart.cart_total(@user.id)%></td>
+              
+          </tr>
+        </tfoot>
+      
+    </table>
+</div>
