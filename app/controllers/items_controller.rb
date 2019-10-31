@@ -1,5 +1,7 @@
 class ItemsController < ApplicationController
 
+  before_action :authenticate_user!, except: [:show]
+
   def show
     @item = Item.find(params[:id])
     @cart_item = CartItem.new
