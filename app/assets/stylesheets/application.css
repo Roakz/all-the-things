@@ -21,6 +21,8 @@
 
  body{
      margin:0px;
+     -webkit-text-size-adjust: none;
+    
  }
 
  /*  Nav bar styling*/
