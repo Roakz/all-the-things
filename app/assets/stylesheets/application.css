@@ -20,9 +20,7 @@
  }
 
  body{
-     margin:0px;
-     -webkit-text-size-adjust: none;
-    
+     margin:0px;    
  }
 
  /*  Nav bar styling*/
@@ -135,3 +133,8 @@
      justify-content: center;
  }
 
+ @media screen and (max-device-width: 480px){
+    body{
+      -webkit-text-size-adjust: 100%;
+    }
+  }
