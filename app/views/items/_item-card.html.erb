@@ -2,7 +2,7 @@
         <h1><%= item.name %></h1>
     
         <% if item.item_picture.attached? %>
-          <% image_tag (item.item_picture), width:900, height: 400, id: "shop-picture" %>
+          <%= image_tag (item.item_picture), width:900, height: 400, id: "shop-picture" %>
         <% else %>
           <div id="shop-image-placeholder" ><H1>Placeholder</H1></div>
         <% end %>

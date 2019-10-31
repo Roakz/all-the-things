@@ -15,7 +15,6 @@ class ItemsController < ApplicationController
     
     @item = current_user.shop.items.create(item_params)
     @item.item_picture.attach(params[:item_picture])
-
     @item.categories.push(category_check)  
 
     if @item.save(item_params) 
@@ -34,7 +33,10 @@ class ItemsController < ApplicationController
   def update
 
     @item = Item.find(params[:id])
+    @item.item_picture.attach(params[:item_picture])
+
     @item.categories.push(category_check)
+    
 
     if @item.update(item_params)
       redirect_to user_shop_item_path(@item)
@@ -51,7 +53,7 @@ class ItemsController < ApplicationController
   private 
 
   def item_params
-    params.require(:item).permit(:name, :quantity, :hook, :content, :price)
+    params.require(:item).permit(:name, :quantity, :hook, :content, :price, :item_picture)
   end
 
   def category_params
