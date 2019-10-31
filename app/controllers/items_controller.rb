@@ -12,7 +12,7 @@ class ItemsController < ApplicationController
   def create
     
     @item = current_user.shop.items.create(item_params)
-    current_user.shop.items.last.item_picture.attach(params[:item_picture])
+    @item.item_picture.attach(params[:item_picture])
 
     @item.categories.push(category_check)  
 
@@ -49,7 +49,7 @@ class ItemsController < ApplicationController
   private 
 
   def item_params
-    params.require(:item).permit(:name, :quantity, :hook, :content, :price, :item_picture)
+    params.require(:item).permit(:name, :quantity, :hook, :content, :price)
   end
 
   def category_params
