@@ -14,7 +14,7 @@ class ItemsController < ApplicationController
   def create
     
     @item = current_user.shop.items.create(item_params)
-    @item.item_picture.attach(params[:item_picture])
+    @item.item_picture.attach(item_params[:item_picture])
     @item.categories.push(category_check)  
 
     if @item.save(item_params) 
@@ -33,7 +33,7 @@ class ItemsController < ApplicationController
   def update
 
     @item = Item.find(params[:id])
-    @item.item_picture.attach(params[:item_picture])
+    @item.item_picture.attach(item_params[:item_picture])
 
     @item.categories.push(category_check)
     
