@@ -7,11 +7,10 @@
       <h1>About</h1>
         <p id="shop-content"><%= @shop.content %></p>
         <% if params[:user_id].to_i == current_user.id %>
-          <%= link_to "edit", edit_user_shop_path(current_user), id: "edit-link" %></div>
+          <%= link_to "edit", edit_user_shop_path(current_user), id: "edit-link" %>
         <% end %>
     </div>
 </div>
-
 
 <%= render "item_card", shop: @shop, cart_item: @cart_item  %>
 

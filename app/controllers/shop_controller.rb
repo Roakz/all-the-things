@@ -37,6 +37,9 @@ class ShopController < ApplicationController
   end
 
   def destroy
+    @shop = Shop.find(params[:id])
+    @shop.destroy
+    redirect_to user_profile_path(current_user.id)
   end
 
   private

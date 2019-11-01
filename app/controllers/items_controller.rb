@@ -48,6 +48,9 @@ class ItemsController < ApplicationController
   end
 
   def destroy
+    @item = Item.find(params[:id])
+    @item.destroy
+    redirect_to user_shop_path(current_user, current_user.shop.id)
   end
 
   private 

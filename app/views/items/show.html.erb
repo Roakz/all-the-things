@@ -7,3 +7,9 @@
     <p><%= @item.content %></p>
 
 </div>
+
+<% if current_user %>
+  <div class="all-cards" id="profile-links">
+    <%= link_to "Delete This Item", user_shop_item_path(current_user.id, current_user.shop.id, @item.id), method: "delete"  %>
+  </div>
+<% end %>
