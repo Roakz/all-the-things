@@ -23,7 +23,9 @@ resources :users do
     end
 end
 
+delete "users/:user_id/cart/:cart_id/cart_items/:id", to: "cart_items#destroy", as: "user_cart_items"
 post "users/:user_id/cart/:cart_id/cart_items", to: "cart_items#create", as: "cart_items"
+patch "users/:user_id/cart/:cart_id/cart_items/:id/", to: "cart_items#update", as: "cart_item"
 
 # User profile resource routes
 resources :user_profiles

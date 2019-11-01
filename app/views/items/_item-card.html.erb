@@ -6,7 +6,9 @@
         <% else %>
           <div id="shop-image-placeholder" ><H1>Placeholder</H1></div>
         <% end %>
-    
+
+        <p style="margin-bottom:0;">Price<br>
+          $<%= sprintf '%.2f', item.price %></p>
         <p><%= item.hook %></p>
 
         <% if current_user.shop.id == item.shop.id %>

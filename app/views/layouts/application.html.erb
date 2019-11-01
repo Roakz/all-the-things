@@ -23,7 +23,7 @@
           <% end %>
           <% if user_signed_in? %>
           <div class="nav-link" id="dash-cart"><%= link_to "Dashboard", user_profile_path(current_user), style: "color:white"  %>
-          <%= link_to "Cart", user_cart_path(current_user), style: "color:white" %></div>
+          <%= link_to "Cart(#{cart_item_quant})", user_cart_path(current_user), style: "color:white;" %></div>
           <% end %>
         </nav>
 
@@ -34,7 +34,7 @@
         <% if alert %>
           <p class="alert"><%= alert %></p>
         <% end %>
-        <%= flash[:alert] %>       
+        <p id="flash-alert"><%= flash[:alert] %></p>     
 
         <!-- This is the main head picture and signin/up and logout buttons displayed on all pages-->
         <div id="fixed-head" class="all-cards">
@@ -62,7 +62,7 @@
             
             <!-- Logout button -->
             <button class="head-button">
-              <%= link_to "Logout", destroy_user_session_path(current_user), method: "delete" %>
+              <%= link_to "Logout", destroy_user_session_path, method: "delete" %>
             </button>
 
           </div>

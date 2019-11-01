@@ -14,9 +14,14 @@
                 <tr>
                     <td><%= cart_item.item %></td>
                     <td>$<%= sprintf('%.2f', cart_item.price) %></td>
-                    <td><%= cart_item.quantity %></td>
-                    <td>$<%=  p sprintf('%.2f', CartItem.item_total((cart_item.quantity).to_d, (cart_item.price).to_d)) %></td>
-                    <td></td>
+                    <td>
+                            <%= form_with model: @cart_item, method: "patch", url: cart_item_path(current_user.id, current_user.cart.id, cart_item.id), local: true do |f| %>
+                            <%= f.number_field(:quantity, in: 1..10, step: 1, value: cart_item.quantity)%> 
+                            <%= f.submit "+/-", class: "head-button", style: "font-weight:bolder;" %>
+                            <% end %>
+                    </td>
+                    <td>$<%= p sprintf('%.2f', CartItem.item_total((cart_item.quantity).to_d, (cart_item.price).to_d)) %></td>
+                    <td><%= link_to "Remove", user_cart_items_path(current_user.id, @user.cart.id, cart_item.id), method: "delete", style: "color:red;" %> </td>
                 </tr>
             </tbody>
         <% end %>
