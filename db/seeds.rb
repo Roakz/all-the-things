@@ -11,8 +11,12 @@ users = User.create! ([
     {email: 'test@testing.com', password: 'topsecret', password_confirmation: 'topsecret'},
     {email: 'test1@testing.com', password: 'topsecret', password_confirmation: 'topsecret'},
     {email: 'test2@testing.com', password: 'topsecret', password_confirmation: 'topsecret'},
-    {email: 'test3@testing.com', password: 'topsecret', password_confirmation: 'topsecret'}
+    {email: 'test3@testing.com', password: 'topsecret', password_confirmation: 'topsecret'},
+    {email: 'admin@admin.com', password: 'admins', password_confirmation: 'admins'}
 ])
+
+User.where(email: "admin@admin.com")[0].add_role :admin
+
 User.all.each do |user|
     user.user_profile.update(name: "Test User", content: "Test content Test content Test content Test content Test content")
 end
@@ -34,3 +38,4 @@ User.all.each do |user|
         item.categories.create(name:"Test category")
     end
 end
+
