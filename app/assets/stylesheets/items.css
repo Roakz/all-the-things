@@ -49,9 +49,8 @@
 #item-content-card p {
   margin: 0;
   padding: 10px;
-  font-size: 1.6;
+  font-size: 2rem;
   text-align: center;
-  font-size: 1.5rem;
 }
 
 #item-content-card h1 {
@@ -69,5 +68,14 @@
   background-color: white;
   text-align: center;
   margin: 10px;
+}
+
+@media screen and (min-width: 900px) {
+  #item-card {
+    max-width: 45%;
+  }
+  #item-card h1 {
+    font-size: 2rem;
+  }
 }
 /*# sourceMappingURL=items.css.map */

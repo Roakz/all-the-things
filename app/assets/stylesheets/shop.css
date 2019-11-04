@@ -214,4 +214,73 @@
   padding-top: 0;
   padding-bottom: 40px;
 }
+
+@media screen and (min-width: 900px) {
+  #search-div {
+    width: 49%;
+  }
+  #search {
+    height: 30px;
+    width: 90%;
+    border: solid black 3px;
+    background-color: #DAD6D6;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  #search-heading {
+    font-size: 1rem;
+  }
+  #category-card {
+    width: 49%;
+    font-size: 1rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  #category-card h1 {
+    font-size: 2rem;
+  }
+  #search-heading {
+    width: 49%;
+  }
+  #shop-card {
+    max-width: 45%;
+  }
+  #shop-card h1 {
+    font-size: 2rem;
+  }
+  #shop-card a {
+    font-size: 1rem;
+    color: blue;
+  }
+  #shop-hook {
+    font-size: 1rem;
+  }
+  #shop-image-placeholder {
+    width: 400px;
+    height: 200px;
+    background-color: grey;
+    text-align: center;
+  }
+  #shop-image-placeholder h1 {
+    font-size: 1rem;
+  }
+  #welcome-card h1 {
+    font-size: 2rem;
+  }
+  #welcome-card p {
+    font-size: 1.5rem;
+  }
+  #shop-content-card {
+    width: 80%;
+  }
+  #shop-content-card h1 {
+    font-size: 2rem;
+  }
+  #shop-content-card p {
+    font-size: 1rem;
+  }
+}
 /*# sourceMappingURL=shop.css.map */

@@ -11,13 +11,13 @@
 
   <body>
     <!-- Whole body wrapper. Will be minimum full view height -->
-    <div id= "whole-body-wrapper">
+   
       <header>
 
         <!-- Nav bar -->
-        <nav class="nav-bar">
+        <nav class="nav-bar" id="top">
           <% if current_page?(root_path) %>
-          <div class="nav-link"><%= link_to "All the things", root_path, style:"color:white;" %></div>
+          <div class="nav-link", id="all-the-things"><%= link_to "All the things", root_path, style:"color:white;" %></div>
           <% else %>
           <div class="nav-link"><%= link_to "Home", root_path, style: "color:white" %></div>
           <% end %>
@@ -59,7 +59,7 @@
             <% end %>
             
             <!-- Logout button -->
-            <button class="head-button">
+            <button class="head-button" >
               <%= link_to "Logout", destroy_user_session_path, method: "delete" %>
             </button>
 
@@ -68,14 +68,15 @@
         </div>
 
       </header>
-
+   
       <!-- fixed bottom nav -->
       <% if user_signed_in? %>
         <nav class="nav-bar" id="bottom-nav">
             <div><%= link_to "Cart(#{cart_item_quant})", user_cart_path(current_user), style: "color:white;" %></div>
+            <div><%= link_to "Top", "#top", style: "color:white;", id: "bottom-top" %></div>
         </nav>
       <% end %>
-
+      <div id= "whole-body-wrapper">
       <%= yield %>  
     
     </div>
