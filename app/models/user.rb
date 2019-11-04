@@ -15,5 +15,9 @@ class User < ApplicationRecord
     self.add_role(:user) if self.roles.blank?
   end
 
+  def self.admin_check(current_user)
+  return current_user.has_role?(:admin)
+  end
+
 
 end

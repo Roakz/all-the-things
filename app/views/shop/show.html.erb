@@ -14,3 +14,9 @@
 
 <%= render "item_card", shop: @shop, cart_item: @cart_item  %>
 
+<% if User.admin_check(current_user) %>
+  <div class="all-cards" id="profile-links">
+    <%= link_to "Admin delete shop", user_shop_path(@shop.user.id, @shop.id), method: "delete"  %>
+  </div>
+<% end %>
+

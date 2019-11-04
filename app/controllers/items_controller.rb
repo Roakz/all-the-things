@@ -1,6 +1,8 @@
 class ItemsController < ApplicationController
 
   before_action :authenticate_user!, except: [:show]
+  before_action :authorise
+  skip_before_action :authorise, only: [:show, ]
 
   def show
     @item = Item.find(params[:id])
@@ -71,6 +73,16 @@ class ItemsController < ApplicationController
       end
 
     return category
+  end
+
+  def authorise
+  
+    return if current_user.id == params[:user_id].to_i && current_user.shop.id == params[:id].to_i 
+
+    flash[:alert] = "soz....You can only create and edit your own shop Items :("
+    
+    redirect_to user_profile_path(current_user.id)
+  
   end
 
 end

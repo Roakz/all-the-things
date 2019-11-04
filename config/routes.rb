@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
  
  
+  get 'users/index'
+  get 'users/destroy'
 # Home page route for shop index pages
 root "shop#index"
 

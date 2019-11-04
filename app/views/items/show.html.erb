@@ -8,8 +8,8 @@
 
 </div>
 
-<% if current_user %>
+<% if current_user.id == @item.shop.user.id || User.admin_check(current_user) %>
   <div class="all-cards" id="profile-links">
-    <%= link_to "Delete This Item", user_shop_item_path(current_user.id, current_user.shop.id, @item.id), method: "delete"  %>
+    <%= link_to "Delete This Item", user_shop_item_path( @item.shop.user.id, @item.shop.id, @item.id), method: "delete"  %>
   </div>
 <% end %>

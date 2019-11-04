@@ -1,0 +1,22 @@
+<div class="all-cards">
+    <h1 style="font-size:5rem; margin:20px;">Admin Dashboard</h1>
+
+<table class="minimalistBlack">
+    <thead>
+        <td>User_name</td>
+        <td>Email</td>
+        <td>Remove</td>
+    </thead>
+    <% @user.each do |user| %>
+        <tbody>
+            <tr>
+                <td><%= user.user_profile.name %></td>
+                <td><%= user.email %></td>
+                <td><%= link_to "Remove", user_path(user.id), method: "delete", style: "color:red;" %> </td>
+            </tr>
+        </tbody>
+    <% end %>
+  
+</table>
+</div>
+
