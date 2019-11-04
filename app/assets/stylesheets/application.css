@@ -45,7 +45,7 @@
 
  /* Setting the background colour of the app to black */
  #whole-body-wrapper{
-     background-color: black;
+     background-color: white;
      min-height: 100vh;
      margin: 0;
      padding-bottom: 90px;
@@ -64,9 +64,10 @@
          /* Setting the background of the head for the whole aplication */
          background-color: white;  
          min-height: 15vh;  
-         border-radius: 10px;
+         /* border-radius: 10px; */
          margin: 15px;
          font-family: 'Rakkas', cursive;
+         border-bottom: 3px solid black;
          /* box-shadow: 5px 5px 5px rgba(129, 128, 128, 0.76); */
 }
 
