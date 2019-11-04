@@ -55,7 +55,7 @@
 
  /* Setting the background colour of the app to black */
  #whole-body-wrapper{
-     background-color: white;
+     background-color: rgb(218, 216, 216);
      min-height: 100vh;
      margin: 0;
  }
@@ -76,7 +76,7 @@
          border-radius: 10px;
          margin: 15px;
          font-family: 'Rakkas', cursive;
-         box-shadow: 5px 5px 5px rgba(70, 69, 69, 0.76);
+         box-shadow: 5px 5px 5px rgba(129, 128, 128, 0.76);
 }
 
  #fixed-head{
@@ -115,7 +115,7 @@
     margin-left: 5px;
     margin-right: 5px;
     border-radius: 16px;
-    border: solid black 2px;
+    border: solid black 3px;
     font-size:3rem;
     font-family: 'Rakkas', cursive;
  }
