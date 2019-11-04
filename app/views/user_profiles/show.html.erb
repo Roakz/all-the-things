@@ -13,7 +13,7 @@
 
 <% if current_user.shop %>
   <div class="all-cards" id="profile-links">
-    <%= link_to "Delete your shop", user_shop_path(current_user.id, current_user.shop.id), method: "delete"  %>
+    <%= link_to "Delete your shop", user_shop_path(current_user.id, current_user.shop.id), method: "delete", style: "color:red;"  %>
   </div>
 <% end %>
 

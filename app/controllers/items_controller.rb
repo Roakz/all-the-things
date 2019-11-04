@@ -71,16 +71,12 @@ class ItemsController < ApplicationController
     
     category = Category.where(name: category_params[:category][:name])
 
-      if ! category[0]
+      if ! category[0] 
         category = Category.create(name: category_params[:category][:name])
-
-      else 
-
-        category = category[0]
-
       end
 
     return category
+
   end
 
   def authorise

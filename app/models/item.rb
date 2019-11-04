@@ -9,11 +9,5 @@ class Item < ApplicationRecord
   validates :price, numericality: true, presence: true
   validates :hook, length: { maximum: 45}
 
-  # def category_invalid(attributes)
-
-  #   if attributes[:name].chars.length < 3
-
-
-  # end
 
 end
