@@ -22,10 +22,9 @@
           <div class="nav-link"><%= link_to "Home", root_path, style: "color:white" %></div>
           <% end %>
           <% if user_signed_in? %>
-          <div class="nav-link" id="dash-cart"><%= link_to "Dashboard", user_profile_path(current_user), style: "color:white"  %>
-          <%= link_to "Cart(#{cart_item_quant})", user_cart_path(current_user), style: "color:white;" %></div>
+           <div class="nav-link" ><%= link_to "Dashboard", user_profile_path(current_user), style: "color:white"  %></div>
           <% end %>
-        </nav>
+        </nav>      
 
         <!-- Devise Flash Messages -->
         <% if notice %>
@@ -69,7 +68,16 @@
         </div>
 
       </header>
-    <%= yield %>
+
+      <!-- fixed bottom nav -->
+      <% if user_signed_in? %>
+        <nav class="nav-bar" id="bottom-nav">
+            <div><%= link_to "Cart(#{cart_item_quant})", user_cart_path(current_user), style: "color:white;" %></div>
+        </nav>
+      <% end %>
+
+      <%= yield %>  
+    
     </div>
   </body>
 </html>

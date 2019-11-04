@@ -42,22 +42,13 @@
     padding-right:15px;
  }
 
- #dash-cart{
-     display:flex;
-     justify-content:space-between;
-     align-items:center;
-     min-width: 47%;
-     padding-right:20px;
-     
- }
-
-
 
  /* Setting the background colour of the app to black */
  #whole-body-wrapper{
-     background-color: rgb(218, 216, 216);
+     background-color: black;
      min-height: 100vh;
      margin: 0;
+     padding-bottom: 90px;
  }
 
  a{
@@ -76,7 +67,7 @@
          border-radius: 10px;
          margin: 15px;
          font-family: 'Rakkas', cursive;
-         box-shadow: 5px 5px 5px rgba(129, 128, 128, 0.76);
+         /* box-shadow: 5px 5px 5px rgba(129, 128, 128, 0.76); */
 }
 
  #fixed-head{
@@ -140,6 +131,14 @@
      background-color: white;
      font-size: 2rem;
      color: red;
+ }
+
+ #bottom-nav{
+    position: fixed;
+    bottom:0;
+    width:100%;
+    padding-left: 15px;
+    padding-bottom: 10px;;
  }
 
 
