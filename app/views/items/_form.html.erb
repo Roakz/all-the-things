@@ -35,6 +35,12 @@
     </div>
 
     <% end %>
+
+    <div class="form-field">
+      <!-- The content field label and text area input -->
+      <%= item_form.label :quantity, "Whats your stock quantity?" %><br>
+      <%= item_form.number_field :quantity, step: 1, class: "input-field" %>
+  </div>
    
    
     <div class="form-field">

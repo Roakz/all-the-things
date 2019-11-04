@@ -17,14 +17,17 @@ class ItemsController < ApplicationController
     
     @item = current_user.shop.items.create(item_params)
     @item.item_picture.attach(item_params[:item_picture])
-    @item.categories.push(category_check)  
-
-    if @item.save(item_params) 
+    @category = category_check 
+  
+    if @category.valid? && @item.save(item_params) 
+      @item.categories.push(@category)
       redirect_to user_shop_path(current_user.id, current_user.shop.id)
     else
-      flash[:alert] = @item.errors.full_messages.to_sentence
+      flash[:alert] = @item.errors.full_messages.to_sentence + @category.errors.full_messages.to_sentence
       redirect_to new_user_shop_item_path(current_user.id, current_user.shop.id, @item.id)
     end
+
+
 
   end
 
@@ -36,14 +39,13 @@ class ItemsController < ApplicationController
 
     @item = Item.find(params[:id])
     @item.item_picture.attach(item_params[:item_picture])
-
-    @item.categories.push(category_check)
+    @category = category_check
     
-
-    if @item.update(item_params)
+    if @category.valid? && @item.update(item_params)
+      @item.categories.push(@category)
       redirect_to user_shop_item_path(@item)
     else
-      flash[:alert] = @item.errors.full_messages.to_sentence
+      flash[:alert] = @item.errors.full_messages.to_sentence + @category.errors.full_messages.to_sentence
       redirect_to edit_user_shop_item_path(@item)
     end
 
@@ -66,10 +68,16 @@ class ItemsController < ApplicationController
   end
   # Helper method checks for existing category assigns it to the variable if nill then creates a new category
   def category_check
-    category = Category.where(name: category_params[:category][:name]) 
+    
+    category = Category.where(name: category_params[:category][:name])
 
       if ! category[0]
         category = Category.create(name: category_params[:category][:name])
+
+      else 
+
+        category = category[0]
+
       end
 
     return category
@@ -77,7 +85,7 @@ class ItemsController < ApplicationController
 
   def authorise
   
-    return if current_user.id == params[:user_id].to_i && current_user.shop.id == params[:id].to_i 
+    return if current_user.id == params[:user_id].to_i && current_user.shop.id == params[:shop_id].to_i 
 
     flash[:alert] = "soz....You can only create and edit your own shop Items :("
     
