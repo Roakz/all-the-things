@@ -42,8 +42,6 @@
     font-size: 1.2rem;
  }
 
-
- /* Setting the background colour of the app to black */
  #whole-body-wrapper{
      background-color: white;
      min-height: 100vh;
@@ -66,7 +64,7 @@
          min-height: 15vh;  
          margin: 15px;
          font-family: 'Rakkas', cursive;
-         border-bottom: 3px solid black;
+         border-bottom: 2px solid black;
 }
 
  #fixed-head{
@@ -139,12 +137,13 @@
      padding-right:15px;
  }
 
- @media screen and (min-width: 450px){
+ @media screen and (min-width: 900px){
      #fixed-head{
          background-image: url("shops.jpeg");
          height: 50vh;
          width: 100%;
          margin: 0;
+         justify-content: center;;
 
      }
 
@@ -153,12 +152,17 @@
          height:auto;
      }
      .head-button{
-         font-size: 1rem;
+         font-size: 1.2rem;
          background-color: rgb(228, 42, 218);
+         margin: 40px;
+
      }
      .nav-bar{
          font-size:1.5rem;
         
+     }
+     .nav-link{
+         padding-right: 15px;
      }
      #all-the-things{
          font-size: 2.5rem;
@@ -167,6 +171,8 @@
          display:flex;
          flex-wrap: wrap;
          justify-content: space-evenly;
+         min-height:0;
      }
+     
     
  }

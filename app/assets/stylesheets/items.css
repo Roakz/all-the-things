@@ -59,14 +59,22 @@
 #item-content-card h1 {
   width: 95%;
   text-align: center;
+  margin: 0;
 }
 
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 900px) {
   #item-card {
-    max-width: 45%;
+    width: 45%;
   }
   #item-card h1 {
     font-size: 2rem;
+  }
+  #item-content-card {
+    width: 100%;
+  }
+  #item-content-card h1 {
+    margin: 0;
+    margin-right: 0;
   }
 }
 /*# sourceMappingURL=items.css.map */

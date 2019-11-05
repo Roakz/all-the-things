@@ -54,4 +54,24 @@ table.minimalistBlack tfoot td {
   text-align: center;
   margin: 5px;
 }
+
+@media screen and (min-width: 900px) {
+  table.minimalistBlack tbody td {
+    font-size: 1.5rem;
+    padding: 10px;
+  }
+  #admin-card {
+    border-bottom: none;
+  }
+  #admin-card h1 {
+    text-align: center;
+  }
+  #cart-card {
+    border-bottom: none;
+  }
+  #cart_item_quantity {
+    height: 40px;
+    width: 40px;
+  }
+}
 /*# sourceMappingURL=carts.css.map */

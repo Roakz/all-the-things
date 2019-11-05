@@ -39,4 +39,11 @@
   text-align: center;
   margin: 10px;
 }
+
+@media screen and (min-width: 900px) {
+  #category-heading-card {
+    width: 100%;
+    height: 60px;
+  }
+}
 /*# sourceMappingURL=categories.css.map */

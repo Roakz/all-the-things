@@ -125,5 +125,43 @@
     a{
         color: blue;
     }
+
+
+}
+
+@media screen and (min-width: 900px){
+    #profile-card{
+        width:100%;
+        a{
+            font-size:1.5rem;
+        }
+    }
+    #profile-heading{
+        font-size:2.5rem;
+    }
+    #profile-links{
+        width:51%;
+        font-size: 1.5rem;
+    }
+    #profile-form-heading-card{
+        height:50px;
+        width:100%;
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+    #edit-form-card{
+        width: 55%;
+        padding:0;
+        padding-bottom:50px;
+        min-height:0;
+        justify-content: flex-start;
+    }
+    .form-field{
+        font-size:2rem;
+        label{
+            padding-top:50px;
+        }
+    }
+
 }
 

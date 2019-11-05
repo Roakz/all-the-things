@@ -208,7 +208,7 @@
   padding-bottom: 40px;
 }
 
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 900px) {
   #search-div {
     width: 49%;
   }
@@ -245,7 +245,7 @@
     font-size: 2rem;
   }
   #shop-card a {
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: blue;
   }
   #shop-hook {
@@ -273,7 +273,11 @@
     font-size: 2rem;
   }
   #shop-content-card p {
-    font-size: 1rem;
+    font-size: 1.2rem;
+  }
+  #edit-heading {
+    height: 70px;
+    width: 100%;
   }
 }
 /*# sourceMappingURL=shop.css.map */

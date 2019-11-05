@@ -180,7 +180,7 @@
 }
 
 
-@media screen and (min-width: 450px){
+@media screen and (min-width: 900px){
     #search-div{
         width: 49%;
     }
@@ -214,7 +214,7 @@
             font-size: 2rem;
         }
         a{
-            font-size:1rem;
+            font-size:1.5rem;
             color: blue;
         }
        
@@ -246,7 +246,11 @@
             font-size:2rem;
         }
         p{
-            font-size: 1rem;
+            font-size: 1.2rem;
         }
+    }
+    #edit-heading{
+        height:70px;
+        width:100%;
     }
 }
