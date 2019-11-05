@@ -303,6 +303,9 @@
   #shop-content-card p {
     font-size: 1.2rem;
   }
+  #shop-content-card a {
+    font-size: 1.5rem;
+  }
   #edit-heading {
     height: 70px;
     width: 100%;
