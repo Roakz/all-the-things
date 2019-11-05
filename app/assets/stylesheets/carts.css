@@ -3,7 +3,7 @@ table.minimalistBlack {
   width: 100%;
   text-align: left;
   border-collapse: collapse;
-  font-size: 3rem;
+  font-size: 1.5rem;
   text-align: center;
 }
 
@@ -13,7 +13,7 @@ table.minimalistBlack td, table.minimalistBlack th {
 }
 
 table.minimalistBlack tbody td {
-  font-size: 2.5rem;
+  font-size: .8rem;
 }
 
 table.minimalistBlack thead {
@@ -42,6 +42,16 @@ table.minimalistBlack tfoot td {
 }
 
 #cart-total {
-  font-size: 3rem;
+  font-size: 1.5rem;
+}
+
+#cart_item_quantity {
+  height: 20px;
+  width: 20px;
+  border: solid black 3px;
+  font-family: 'Rakkas', cursive;
+  background-color: white;
+  text-align: center;
+  margin: 5px;
 }
 /*# sourceMappingURL=carts.css.map */

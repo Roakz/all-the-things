@@ -20,7 +20,7 @@
  }
 
  body{
-     margin:0px;    
+     margin:0px; 
  }
 
  /*  Nav bar styling*/
@@ -29,17 +29,17 @@
      justify-content: space-between;
      align-items:center;
      max-width:100%;
-     height:60px;
-     font-size: 3.7rem;
-     padding:8px;  
-     padding-top: 18px;  
      background-color: black; 
+ }
+
+ #all-the-things{
+     font-size: 1.5rem;
  }
 
 
 .nav-link{
-    padding-left:15px;
-    padding-right:15px;
+    padding:7px;
+    font-size: 1.2rem;
  }
 
 
@@ -48,7 +48,7 @@
      background-color: white;
      min-height: 100vh;
      margin: 0;
-     padding-bottom: 90px;
+     padding-bottom: 50px;
  }
 
  a{
@@ -64,58 +64,53 @@
          /* Setting the background of the head for the whole aplication */
          background-color: white;  
          min-height: 15vh;  
-         /* border-radius: 10px; */
          margin: 15px;
          font-family: 'Rakkas', cursive;
          border-bottom: 3px solid black;
-         /* box-shadow: 5px 5px 5px rgba(129, 128, 128, 0.76); */
 }
 
  #fixed-head{
     
     /* Display properties for the fixed head */
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items:center;
-    justify-content: center;
+    justify-content: space-evenly;
     background-image: url("market.jpeg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    width:100%;
+    margin:0;
  }
 
-  /* set the font for the H1 within head */
- #head-h1{
+
+  #head-h1{
     display: none;
     font-family: 'Rakkas', cursive;
     color:black;
-    font-size: 6rem;
     padding:0;
     margin: 0px;
     
- }
+ } 
 
  /* Button styling within the head */
  .head-button{
-    border: none;
+    /* border: 1px solid black; */
     background-color: rgb(255, 126, 51);
-    padding: 10px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    margin-bottom: 20px;
-    margin-left: 5px;
-    margin-right: 5px;
-    border-radius: 16px;
+    border-radius: 15px;
     border: solid black 3px;
-    font-size:3rem;
+    padding: 5px;
     font-family: 'Rakkas', cursive;
+    font-size: 1rem;
  }
 
  /* Notice styling */
  .notice{
      color: green;
-     font-size: 3rem;
      background-color:white;
      display:flex;
      justify-content: center;
@@ -123,14 +118,12 @@
  }
  .alert{
      color:red;
-     font-size: 3rem;
      background-color:white;
      display:flex;
      justify-content: center;
  }
  #flash-alert{
      background-color: white;
-     font-size: 2rem;
      color: red;
  }
 
@@ -138,15 +131,15 @@
     position: fixed;
     bottom:0;
     width:100%;
-    padding-left: 15px;
-    padding-bottom: 10px;
+    padding: 5px;
+    font-size: 1rem;
  }
 
  #bottom-top{
-     padding-right:30px;
+     padding-right:15px;
  }
 
- @media screen and (min-width: 900px){
+ @media screen and (min-width: 450px){
      #fixed-head{
          background-image: url("shops.jpeg");
          height: 50vh;

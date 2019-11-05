@@ -11,15 +11,13 @@
     align-items: center;
     
     // padding for visual enhancement around borders of card
-    padding: 20px;
+    padding: 5px;
     min-height: 50vh;
    
 }
 
 .form-field{
-    // setting form font sizes
     font-family: 'Rakkas', cursive;
-    font-size: 3.5rem;
 
     // display properties within the form field divs for alignment
     display: flex;
@@ -33,43 +31,34 @@
 
 // form input field & file upload styling
 #user_profile_name{
-    height:60px;
     width: 80%;
-    border: solid black 3px;
+    height: 25px;
+    border: solid black 2px;
     background-color: #DAD6D6; 
-    border-radius: 10px;
-    font-size: 2rem;
+    border-radius: 5px;
     font-weight: bold;
+   
 }
 
 #user_profile_content{
-    height:300px;
+    height:150px;
     width:80%;
     border: solid black 3px;
     background-color: #DAD6D6; 
-    border-radius: 10px;
-    font-size: 2rem;
+    border-radius: 5px;
     font-weight: bold;
 }
 
-#file-upload{
-   font-size:2.5rem; 
-   margin-left: 200px;
-   margin-bottom: 70px;
-   
-}
 
 // The form heading card and h1 heading
 #profile-form-heading-card{
     margin-top: 0;
     min-height:0;
-    padding: 40px;
     display:flex;
     justify-content:center;
 }
 #profile-form-heading{
     font-family: 'Rakkas', cursive;
-    font-size: 3.5rem;
     margin:0;
 }
 
@@ -82,9 +71,9 @@
     align-items:center;
 
     a{
-        font-size: 3rem;
         width: 90%;
         padding-bottom: 15px;
+        color: blue;
     }
 }
 
@@ -92,38 +81,31 @@
 #profile-wrap{
     display:flex;
     justify-content: space-between;
-    padding: 30px;
+    padding: 5px;
 }
 
 // users profile image div placeholder when no image present
 #user-image{
-    height: 400px;
-    width: 400px;
+    height: 150px;
+    width: 40%;
     background-color: grey;
     padding: 10px;
     margin: 10px;
-    border: solid black 3px;
+    border: solid black 1px;
     display:flex;
     justify-content:center;
     align-items:center;
-    p{
-        font-size: 3rem;
-    }
 }
 
-#profile-heading{
-    font-size: 4rem;
-}
 
 // profile content div
 #profile-content{
     // size of div is set
-    height: 400px;
-    width:400px;
+    height: 150px;
+    width:40%;
 
     // Setting the font family and size 
     font-family: 'Rakkas', cursive;
-    font-size: 2rem;
 
     // padding and margin added for visual enhancement 
     padding: 10px;
@@ -141,7 +123,6 @@
     justify-content:space-around;
     align-items:center;
     a{
-        font-size: 3.5rem;
         color: blue;
     }
 }

@@ -12,7 +12,7 @@
       $<%= sprintf '%.2f', item.price %></p>
     <p><%= item.hook %></p>
      
-    <%= link_to "view item", user_shop_item_path( item.shop.user, item.shop.id, item.id), style: "font-size:3rem;" "color:blue;" "padding-bottom:30px;" %>
+    <%= link_to "view item", user_shop_item_path( item.shop.user, item.shop.id, item.id), style:"color:blue;" "padding-bottom:30px;" %>
     
     <% if current_user.shop %>
     <% if item.shop.id == current_user.shop.id && current_page?(user_shop_item_path(current_user, current_user.shop, params[:id])) %>

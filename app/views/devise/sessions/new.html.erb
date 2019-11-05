@@ -1,5 +1,5 @@
 <div class="all-cards" style="min-height:0;">
-  <h1 style="font-size:5rem; text-align:center; margin:5px;">Sign in</h1>
+  <h1 style= "text-align:center; margin:5px;">Sign in</h1>
 </div>
 <div class="all-cards" id="edit-form-card" >
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -16,7 +16,7 @@
   <% if devise_mapping.rememberable? %>
     <div class="field">
       <%= f.label :remember_me %>
-      <%= f.check_box :remember_me, :style => "width: 55px; height: 55px; margin-top:50px;" %>
+      <%= f.check_box :remember_me, :style => "width: 20px; height: 20px;" %>
     </div>
   <% end %>
 

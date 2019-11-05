@@ -4,70 +4,60 @@
     <title>All The Things</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Rakkas&display=swap" rel="stylesheet">
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <!-- Whole body wrapper. Will be minimum full view height -->
-   
-      <header>
 
-        <!-- Nav bar -->
-        <nav class="nav-bar" id="top">
-          <% if current_page?(root_path) %>
+    <header>
+
+      <nav class="nav-bar" id="top">
+        <% if current_page?(root_path) %>
           <div class="nav-link", id="all-the-things"><%= link_to "All the things", root_path, style:"color:white;" %></div>
-          <% else %>
+        <% else %>
           <div class="nav-link"><%= link_to "Home", root_path, style: "color:white" %></div>
-          <% end %>
-          <% if user_signed_in? %>
-           <div class="nav-link" ><%= link_to "Dashboard", user_profile_path(current_user), style: "color:white"  %></div>
-          <% end %>
-        </nav>      
-
-        <!-- Devise Flash Messages -->
-        <% if notice %>
-          <p class="notice"><%= notice %></p>
         <% end %>
-        <% if alert %>
-          <p class="alert"><%= alert %></p>
-        <% end %> 
+        <% if user_signed_in? %>
+          <div class="nav-link" ><%= link_to "Dashboard", user_profile_path(current_user), style: "color:white"  %></div>
+        <% end %>
+      </nav>      
 
-        <!-- This is the main head picture and signin/up and logout buttons displayed on all pages-->
-        <div id="fixed-head" class="all-cards">
+      <!-- Devise Flash Messages -->
+      <% if notice %>
+        <p class="notice"><%= notice %></p>
+      <% end %>
+      <% if alert %>
+        <p class="alert"><%= alert %></p>
+      <% end %> 
 
-          <!-- Main  heading -->
-          <h1 id="head-h1">All The Things</h1>
+      <!-- This is the main head picture and signin/up and logout buttons displayed on all pages-->
+      <div id="fixed-head" class="all-cards">
 
-          
-          <!-- Button container -->
-          <div id="button-div">
+              <!-- Logic to only display the signup/in if there is no session -->
+          <% if ! user_signed_in? %>
 
-            <!-- Logic to only display the signup/in if there is no session -->
-            <% if ! user_signed_in? %>
-
-              <!-- Sign up button -->
-              <button class="head-button">
-                <%= link_to "Join Us!", new_user_registration_path %>
-              </button>
-
-              <!-- Login Button -->
-              <button class="head-button">
-                <%= link_to "Login", new_user_session_path %>
-              </button>
-            <% end %>
-            
-            <!-- Logout button -->
-            <button class="head-button" >
-              <%= link_to "Logout", destroy_user_session_path, method: "delete" %>
+            <!-- Sign up button -->
+            <button class="head-button">
+              <%= link_to "Join Us!", new_user_registration_path %>
             </button>
 
-          </div>
+              <!-- Login Button -->
+            <button class="head-button">
+              <%= link_to "Login", new_user_session_path %>
+            </button>
+          <% end %>
+            
+          <!-- Logout button -->
+          <button class="head-button" >
+            <%= link_to "Logout", destroy_user_session_path, method: "delete" %>
+          </button>
 
-        </div>
+      </div>
 
-      </header>
+    </header>
    
       <!-- fixed bottom nav -->
       <% if user_signed_in? %>
@@ -76,7 +66,7 @@
             <div><%= link_to "Top", "#top", style: "color:white;", id: "bottom-top" %></div>
         </nav>
       <% end %>
-      <div id= "whole-body-wrapper">
+    <div id= "whole-body-wrapper">
       <%= yield %>  
     
     </div>

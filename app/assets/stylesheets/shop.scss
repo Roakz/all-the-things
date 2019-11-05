@@ -5,36 +5,33 @@
 // THIS IS FOR THE SHOP CREATE FORM
 #edit-form-card{
     .form-field{
-        padding-right:0px;
+       padding:10px;
     }
 
     #shop_name{
-        height:60px;
-        width: 80%;
-        border: solid black 3px;
+        height:20px;
+        width: 90%;
+        border: solid black 2px;
         background-color: #DAD6D6; 
-        border-radius: 10px;
-        font-size: 2rem;
+        border-radius: 5px;
         font-weight: bold;
     }
 
     #shop_hook{
-        height:100px;
-        width:80%;
-        border: solid black 3px;
+        height:50px;
+        width:90%;
+        border: solid black 2px;
         background-color: #DAD6D6; 
-        border-radius: 10px;
-        font-size: 2rem;
+        border-radius: 5px;
         font-weight: bold;
     }
     
     #shop_content{
-        height:300px;
-        width:80%;
-        border: solid black 3px;
+        height:50px;
+        width:90%;
+        border: solid black 2px;
         background-color: #DAD6D6; 
-        border-radius: 10px;
-        font-size: 2rem;
+        border-radius: 5px;
         font-weight: bold;
     }
 }
@@ -49,6 +46,7 @@
     display:flex;
     flex-direction: column;
     align-items: center;
+    margin: 5px;
 }
 
 #heading-view{
@@ -57,39 +55,33 @@
     width: 95%;
     a{
         margin:10px;
-        font-size: 3rem;
+        color:blue;
     }
     h1{
-        font-size: 4rem;
         margin:10px;
     }
 }
 #shop-hook{
-    font-size: 3rem;
     width: 95%;
     text-align:center;
+    padding: 5px;
 }
 #shop-content{
     text-align:center;
-    margin-top: 0;
-    padding: 15px;
-    margin-bottom: 0px;
-    font-size: 39px;
+    padding: 5px;
+    margin: 5px;
+    padding-bottom: 10px;
     
 }
 #shop-content-card{
+    margin: 0;
 
     h1{
-        padding:10px;
-        margin: 5px;
-        font-size: 4rem;
+        margin: 15px;
     }
     a{
-        font-size: 3rem;
         color: blue;
     }
-  
-
 
 }
 #edit-link{
@@ -101,12 +93,13 @@
 }
 
 #shop-image-placeholder{
-    width: 900px;
-    height: 400px;
+    min-width: 300px;
+    max-width: 600px;
+    height: 150px;
     background-color: grey;
     text-align: center;
     h1{
-        font-size: 3rem;
+        font-size: 1rem;
     }
 }
 
@@ -114,8 +107,7 @@
 #edit-heading{
     min-height: 0;
     h1{
-        font-size:4rem;
-        padding:30px;
+        padding:5px;
         margin: 0;
         width:95%;
         text-align:center;
@@ -125,12 +117,11 @@
 
 // Form search field
 #search{
-    height:60px;
+    height:20px;
     width: 90%;
     border: solid black 3px;
     background-color: #DAD6D6; 
     border-radius: 10px;
-    font-size: 2rem;
     font-weight: bold;
 }
 // field wrapper div
@@ -155,7 +146,6 @@
     padding-right: 20px;
 }
 #search-heading{
-    font-size: 1.5rem;
     text-align: center;
     min-height: 0;
     h1{
@@ -180,11 +170,9 @@
         margin:0;
         margin-left: 25px;
         padding-top: 30px;
-        font-size: 4rem;
     }
     p{
         margin:10px;
-        font-size:2rem;
         padding:15px;
         padding-top: 0;
         padding-bottom: 40px;
@@ -192,7 +180,7 @@
 }
 
 
-@media screen and (min-width: 900px){
+@media screen and (min-width: 450px){
     #search-div{
         width: 49%;
     }

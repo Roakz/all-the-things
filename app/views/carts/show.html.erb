@@ -1,11 +1,11 @@
 <div class="all-cards">
-        <h1 style="font-size:5rem; margin:20px;">Cart</h1>
+        <h1>Cart</h1>
 
     <table class="minimalistBlack">
         <thead>
             <td>Item</td>
             <td>Price</td>
-            <td>Quantity</td>
+            <td>Qty</td>
             <td>Total</td>
             <td>Edit</td>
         </thead>
@@ -21,7 +21,7 @@
                             <% end %>
                     </td>
                     <td>$<%= p sprintf('%.2f', CartItem.item_total((cart_item.quantity).to_d, (cart_item.price).to_d)) %></td>
-                    <td><%= link_to "Remove", user_cart_items_path(current_user.id, @user.cart.id, cart_item.id), method: "delete", style: "color:red;" %> </td>
+                    <td><%= link_to "Del", user_cart_items_path(current_user.id, @user.cart.id, cart_item.id), method: "delete", style: "color:red;" %> </td>
                 </tr>
             </tbody>
         <% end %>
