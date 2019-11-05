@@ -264,6 +264,9 @@
   #shop-image-placeholder h1 {
     font-size: 1rem;
   }
+  #welcome-card {
+    width: 90%;
+  }
   #welcome-card h1 {
     font-size: 2rem;
     padding-top: 0;
