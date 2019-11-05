@@ -34,7 +34,9 @@ class ShopController < ApplicationController
 
   def update
     @shop = current_user.shop.update(shop_params)
-    current_user.shop.shop_image.attach(shop_params[:shop_image])
+    if shop_params[:shop_image]
+      current_user.shop.shop_image.attach(shop_params[:shop_image])
+    end
     redirect_to user_shop_path(current_user)
   end
 

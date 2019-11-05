@@ -38,7 +38,9 @@ class ItemsController < ApplicationController
   def update
 
     @item = Item.find(params[:id])
-    @item.item_picture.attach(item_params[:item_picture])
+    if item_params[:item_picture]
+      @item.item_picture.attach(item_params[:item_picture])
+    end
     @category = category_check
     
     if @category.valid? && @item.update(item_params)

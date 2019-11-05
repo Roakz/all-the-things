@@ -14,7 +14,9 @@ class UserProfilesController < ApplicationController
   # fix me!!
   def update
     @user_profile = current_user.user_profile.update(profile_params)
+    if profile_params[:profile_image]
     @user_profile = current_user.user_profile.profile_image.attach(profile_params[:profile_image])
+    end
     redirect_to user_profile_path(current_user)
   end
 
