@@ -40,6 +40,8 @@
 
 #shop-picture{
     border: solid black 3px;
+    width:80%;
+    height: 200px; 
 }
 
 #shop-card{
@@ -179,7 +181,15 @@
     }
 }
 
+@media screen and (min-width: 400px){
 
+    #shop-picture{
+       
+        width: 400px;
+        height: 200px; 
+    }
+
+}
 @media screen and (min-width: 900px){
     #search-div{
         width: 55%;

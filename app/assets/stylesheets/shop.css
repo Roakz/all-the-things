@@ -31,6 +31,8 @@
 
 #shop-picture {
   border: solid black 3px;
+  width: 80%;
+  height: 200px;
 }
 
 #shop-card {
@@ -206,6 +208,13 @@
   padding: 15px;
   padding-top: 0;
   padding-bottom: 40px;
+}
+
+@media screen and (min-width: 400px) {
+  #shop-picture {
+    width: 400px;
+    height: 200px;
+  }
 }
 
 @media screen and (min-width: 900px) {
