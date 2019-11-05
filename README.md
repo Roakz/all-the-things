@@ -1,8 +1,9 @@
 <h1>All The Things</h1>
 
 
-- link to URL deployed app
-- link to GitHub
+**Site links**
+- https://powerful-tundra-28686.herokuapp.com/
+- https://github.com/Roakz/all-the-things
 
 <h3>Contents</h3>
 
