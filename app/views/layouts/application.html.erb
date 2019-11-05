@@ -66,6 +66,7 @@
         <nav class="nav-bar" id="bottom-nav">
             <div><%= link_to "Cart(#{cart_item_quant})", user_cart_path(current_user), style: "color:white;" %></div>
             <div><%= link_to "Top", "#top", style: "color:white;", id: "bottom-top" %></div>
+            <div><%= link_to 'Back', :back, style: "color:white;", id: "bottom-top"  %></div>
         </nav>
       <% end %>
     <div id= "whole-body-wrapper">
