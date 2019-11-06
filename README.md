@@ -5,6 +5,8 @@
 - https://powerful-tundra-28686.herokuapp.com/
 - https://github.com/Roakz/all-the-things
 
+![web page head image](app/assets/images/page-head.png)
+
 <h3>Contents</h3>
 
 1. **Purpouse**
@@ -93,17 +95,27 @@ I will then complete An ERD entity relational diagram. This will map out the req
 
 Also a sitemap will go hand in hand with this.
 
-Pictures of all of the Above will be posted here.
+**Pictures of the Above**
 
-**Mood boards**
 **Mock-ups/Wireframes**
-**ERD**
+
+![wireframes](app/assets/images/mobile-frames.PNG)
+
 **Sitemap**
+
+![Site-map](app/assets/images/site-map.PNG)
+
 **Trello Project Management**
+
+![Site-map](app/assets/images/trello.PNG)
+
+**ERD**
+
+![Site-map](app/assets/images/erd.PNG)
 
 <h2>4.Database</h2>
 
-The app contains a relational database system using postgresql and rails to create the appropriate migragtions of database queries. 
+The app contains a relational database system using postgresql and rails to create the appropriate migragtions of database queries. One of the great things about rails with postgresql is that it will generate the required migrations holding the appropriate queries in it & create our database schema. 
 
 The general flow and relationships or associations if you will are demonstrated in the ERD above. But basically there will be a User model which Has one profile and cart(shopping cart). The cart can have many cart-items which will form the order to be passed to stripe.Cart items will be destroyed upon a succesfull sale. The user can be both a buyer and a seller if they want. So the User can create 1 shop meaning the User can have 1 shop(has_one). From here a shop has many items (has_many). All of these items will therefore be created through a user which is important to know for routing purpouses.
 
