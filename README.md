@@ -29,6 +29,7 @@ ___
 
 <h2>1. Purpose</h2>
 All the Things is being developed to meet the criteria of creating a 2 sided marketplace app for an assignment I am completing at Coder Academy. The purpose is to handle the app from design to deployment in the rails domain. It will be developed with the intention to create an online domain where a user can purchase all the things! for an absolute bargain!!....why ? Because we need all the things! :D. The target audience is people selling goods and people wanting to buy them.<br>
+
 ___
 
 <h2>2.Functionality & Features</h2>
