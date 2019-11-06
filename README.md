@@ -5,7 +5,7 @@
 - https://powerful-tundra-28686.herokuapp.com/
 - https://github.com/Roakz/all-the-things
 
-![web page head image](app/assets/images/page-head.png)
+![web page head image](./app/assets/images/page-head.png)
 
 <h3>Contents</h3>
 
@@ -25,10 +25,11 @@
 -	database-schema attachment
 5. **Attached presentation slide deck**
 
-
+___
 
 <h2>1. Purpose</h2>
 All the Things is being developed to meet the criteria of creating a 2 sided marketplace app for an assignment I am completing at Coder Academy. The purpose is to handle the app from design to deployment in the rails domain. It will be developed with the intention to create an online domain where a user can purchase all the things! for an absolute bargain!!....why ? Because we need all the things! :D. The target audience is people selling goods and people wanting to buy them.
+___
 
 <h2>2.Functionality & Features</h2>
 
@@ -81,6 +82,8 @@ Stripe is a proffesional full-package checkout system API for accepting customer
 
 Stripe API has many options including one off, subscriptions and even splitting payment and fees for fullscale market place sites that require payment to go to the sellers aswell.
 
+___
+
 <h2>3.Planning</h2>
 
 All aspects of the app will be planned out before writing code to ensure a structured and focused approach. I will Use Trello to assit in Managing the flow of the project and to keep things focused.
@@ -99,19 +102,19 @@ Also a sitemap will go hand in hand with this.
 
 **Mock-ups/Wireframes**
 
-![wireframes](app/assets/images/mobile-frames.PNG)
+![wireframes](./app/assets/images/mobile-frames.PNG)
 
 **Sitemap**
 
-![Site-map](app/assets/images/site-map.PNG)
+![Site-map](./app/assets/images/site-map.PNG)
 
 **Trello Project Management**
 
-![Site-map](app/assets/images/trello.PNG)
+![Site-map](./app/assets/images/trello.PNG)
 
 **ERD**
 
-![Site-map](app/assets/images/erd.PNG)
+![Site-map](./app/assets/images/erd.PNG)
 
 <h2>4.Database</h2>
 
@@ -121,7 +124,7 @@ The general flow and relationships or associations if you will are demonstrated 
 
 An item and a category share the only required many to many relationship of the app an item can have many categories and a categroy can have many items. For this I will use a joining table called ItemsCategories which will hold the ids for both and form the many to many relationship between them.
 
-Also worth metioning is that although our cart items will be using information directly from our items they are in no way actually related and i figures its just as easy to pass the item id through with the add item form so that all the required details are avaible in the controller.
+Also worth metioning is that although our cart items will be using information directly from our items they are in no way actually related and i figures its just as easy to pass the item id through with the add item form so that all the required details are avaible in the controller. 
 
 **Any Feedback always Appreciated**
 
