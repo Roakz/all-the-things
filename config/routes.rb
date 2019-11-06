@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
  
  
+  get 'shop_owners/new'
+  get 'shop_owners/create'
   get 'users/index'
   get 'users/destroy'
 # Home page route for shop index pages
