@@ -6,7 +6,6 @@
 - https://github.com/Roakz/all-the-things
 
 ![web page head image](./app/assets/images/page-head.png)
-___
 
 <h3>Contents</h3>
 
