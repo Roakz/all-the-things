@@ -5,7 +5,7 @@
 - https://powerful-tundra-28686.herokuapp.com/
 - https://github.com/Roakz/all-the-things
 
-![web page head image]("app/assets/images/page-head.png")
+![web page head image]("page-head.png")
 
 <h3>Contents</h3>
 
