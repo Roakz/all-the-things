@@ -3,8 +3,8 @@ require 'stripe'
 class ShopOwnersController < ApplicationController
 
   def new
-    
-    Stripe.api_key = 'sk_test_2YlBMbpEnNdEbm8vFarTRej900Hd5T9Rar'
+
+    Stripe.api_key = Rails.application.credentials.dig(:stripe, :api_test_key)
 
     @session = Stripe::Checkout::Session.create(
     payment_method_types: ['card'],
