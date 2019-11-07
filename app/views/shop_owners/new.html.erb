@@ -1,2 +1,28 @@
-<h1>ShopOwners#new</h1>
-<p>Find me in app/views/shop_owners/new.html.erb</p>
+<div class="all-cards" id="welcome-card">
+    <h1>Your thinking of joining us!!! YAY!!</h1>
+    <p>
+        To become a shop owner & start selling there is currently a one off $2 donation.
+        This donation gives you full access to all of the shop owner features. You can create and edit your shop
+         and add and sell as many items as you want !! click below to donate now and the link will become available
+          in your dashboard.<br><br>
+          Total Price: $2.00
+    </p>
+</div>
+
+<div id="donate-button">
+
+    <button class="head-button" id="checkout">Donate now!</button>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script>
+      var stripe = Stripe('pk_test_GavK0ri4blgtv6I61mMdRght00khrC0hI3');
+      function checkout() {
+        stripe
+          .redirectToCheckout({
+            sessionId: "<%= @session.id %>"
+          })
+          .then(result => alert(result));
+      }
+      document.querySelector("#checkout").addEventListener("click", checkout)
+    </script>
+
+</div>

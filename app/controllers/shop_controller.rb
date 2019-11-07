@@ -60,7 +60,7 @@ class ShopController < ApplicationController
 
   def authorise
   
-    return if current_user.has_role?(:admin) || current_user.id == params[:user_id].to_i && current_user.shop.id == params[:id].to_i
+    return if current_user.has_role?(:admin) || (current_user.id == params[:user_id].to_i)
 
     flash[:alert] = "soz....You can only create and edit your own shops :("
     
