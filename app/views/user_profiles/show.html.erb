@@ -6,10 +6,13 @@
   <%= link_to "Go Shopping", root_path %>
   <% if current_user.shop %>
     <%= link_to "View/Edit Shop", user_shop_path(current_user, current_user.shop) %>
+  <% elsif current_user.has_role? :shop_owner %>
+  <%= link_to "Create shop", new_user_shop_path(current_user.user_profile.id)  %>
   <% else %>
-    <%= link_to "Create shop", new_user_shop_path(current_user.user_profile.id)  %>
+  <div data-turbolinks="false"><%= link_to "Become a shop owner", user_shop_owners_path(current_user) %></div>
   <% end %>
 </div>
+
 
 <% if User.admin_check(current_user) %>
 <div class="all-cards" id="profile-links">

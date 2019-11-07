@@ -3,7 +3,7 @@ class ShopController < ApplicationController
   before_action :authenticate_user!
   before_action :authorise
   skip_before_action :authenticate_user!, only: [:index]
-  skip_before_action :authorise, only: [:index, :show]
+  skip_before_action :authorise, only: [:index, :show, :new]
 
   def index
       @shop = Shop.where('name LIKE ?', "%#{params[:search]}%")
@@ -60,7 +60,7 @@ class ShopController < ApplicationController
 
   def authorise
   
-    return if current_user.has_role?(:admin) || current_user.id == params[:user_id].to_i && current_user.shop.id == params[:id].to_i
+    return if current_user.has_role?(:admin) || (current_user.id == params[:user_id].to_i)
 
     flash[:alert] = "soz....You can only create and edit your own shops :("
     

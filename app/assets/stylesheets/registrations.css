@@ -52,4 +52,14 @@
           justify-content: center;
   padding: 20px;
 }
+
+#create-heading {
+  min-height: 0;
+}
+
+@media screen and (min-width: 900px) {
+  #create-heading {
+    width: 100%;
+  }
+}
 /*# sourceMappingURL=registrations.css.map */
