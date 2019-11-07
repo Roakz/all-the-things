@@ -5,6 +5,7 @@
 - https://powerful-tundra-28686.herokuapp.com/
 - https://github.com/Roakz/all-the-things
 
+
 ![web page head image](./app/assets/images/page-head.png)
 
 <h3>Contents</h3>
@@ -28,7 +29,7 @@
 ___
 
 <h2>1. Purpose</h2>
-All the Things is being developed to meet the criteria of creating a 2 sided marketplace app for an assignment I am completing at Coder Academy. The purpose is to handle the app from design to deployment in the rails domain. It will be developed with the intention to create an online domain where a user can purchase all the things! for an absolute bargain!!....why ? Because we need all the things! :D. The target audience is people selling goods and people wanting to buy them.<br>
+All the Things is being developed to meet the criteria of creating a 2 sided marketplace app for an assignment I am completing at Coder Academy. The purpose is to handle the app from design to deployment in the rails domain. It will be developed with the intention to create an online domain where a user can purchase all the things! for an absolute bargain!!....why ? Because we need all the things! :D. The target audience is people selling goods and people wanting to buy them. But overall its just an MVP to meet assessment requirements.<br>
 
 ___
 
@@ -36,9 +37,9 @@ ___
 
 <h3>Functionality</h3>
 
-All the things will be a fullly funtioning 2 sided market place app. A user will be able to browse shops on the main home page which will be layed out on individual cards to create a dynamic design. If they want to see more they simply click into the shop. Here they can view the shop profile and items its selling. If they want to buy items they can add it to the cart and then checkout once they are done shopping. User will also be directed to create a profile upon signing up for an account.
+All the things will be a fullly funtioning 2 sided market place app MVP. A user will be able to browse shops on the main home page which will be layed out on individual cards to create a dynamic design. If they want to see more they simply click into the shop. Here they can view the shop profile and items its selling. If they want to buy items they can add it to the cart and then checkout once they are done shopping. User will also be directed to create a profile upon signing up for an account.
 
-From a sellers point of view you will be able to create a Shop which will have a profile. Any user can do this. Within that shop you can add as many items as you wish which will be listed in your shop and on the category browse page. Users will be able to view your shop and all items in it if they click into your particular store. 
+From a sellers point of view you will be able to create a Shop which will have a profile. Any user can do this for a small $2 dollar donation. Within that shop you can add as many items as you wish which will be listed in your shop and on the category browse page. Users will be able to view your shop and all items in it if they click into your particular store. 
 
 <h3>Features</h3>
 
@@ -49,7 +50,7 @@ This will Assist with authorisation aswell as authenticaiton.
 **- A shopping cart**
 To improve user experience and keep them shopping for all the great bargains!
 **- A checkout**
-This will ensure the seller can accept funds and that we can take our cut.
+To accept the $2 dollar donation using stripe integration
 **- Search bar**
 A simple search bar to search listed items
 **- Category Page**
@@ -59,7 +60,7 @@ A dynamically generated category listing page with the Categories of currently l
 
 This apps back end funcionality will be developed using The rails Framework stacked on the Ruby language. The styling will be done using SCSS for some basic CSS styling and HTML for the main page layouts. 
 
-Postgresql will be used for the database utilising a relational data moddel and this will tie in nicely with deploying on Heroku as it supports this structure in a relativley easy manner to deploy right from terminal. Im planning on deploying fairly early to avoid late deployment issues. Pretty much as soon as i have finished the mobile layouts.
+Postgresql will be used for the database utilising a relational data model and this will tie in nicely with deploying on Heroku as it supports this structure in a relativley easy manner to deploy right from terminal. Im planning on deploying fairly early to avoid late deployment issues. Pretty much as soon as i have finished the mobile layouts.
 
 **Gems**
 
@@ -126,6 +127,16 @@ The general flow and relationships or associations if you will are demonstrated 
 An item and a category share the only required many to many relationship of the app an item can have many categories and a categroy can have many items. For this I will use a joining table called ItemsCategories which will hold the ids for both and form the many to many relationship between them.
 
 Also worth metioning is that although our cart items will be using information directly from our items they are in no way actually related and i figures its just as easy to pass the item id through with the add item form so that all the required details are avaible in the controller. 
+
+<h2>Expansion Possibilities</h2>
+
+As previously mentioned this is an MVP of what the site would look like. Due to time constraints i had to make decisions about what functionality i would implement & what i wouldn't in order to meet criteria. In the ideal world You would integrate stripe at the checkout phase using there Connect style account where you have a platform setup. This then enables the sellers or shop owners to sign up to or link up there stripe accounts. As the site is gathering many sellers potentialy in each individual purchase i didnt have time to set up the back end for this in this particular assignment.
+
+Other potential features could be storing order history on the app which could be accessed by the user. Aswell as a buyer and seller rating system where they can rate each other and leave comments etc. Another nice feature would be making the avatar profile images mroe dominant thorughout the site. 
+
+At this stage i have also left out adding adtional payment tokens for a more secure payment system as this would involve using extra hashing software which i am not yet familiar with and also once again time restraints.
+
+I look forward to playing around with these things moving forward.
 
 **Any Feedback always Appreciated**
 
