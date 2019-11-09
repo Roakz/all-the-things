@@ -67,16 +67,16 @@ Postgresql will be used for the database utilising a relational data model and t
 **The Gems used will be as follows:**
 **Devise -** User Authentication
 **Rolify -** Authorisations
-**Cloudify -** Image attachment using with the Active Storage Unit of rails.
+**Cloudinary -** Image attachment using with the Active Storage Unit of rails.
 **Stripe -** Payment checkout
 
 **Third party API**
 
 As you may have figured from above third party API's will be used fin the development of this app.
 
-**cloudify**
+**cloudinary**
 
-Cloudify provides a third party cloud image and fiole hosting service. They have a well documented api that doesnt require much setup. Just some encrypting of API keys and installation of there gems which work in nicely with ActiveStorage in Rails. It provides not only storage but some great image manipulation options aswell.
+Cloudinary provides a third party cloud image and file hosting service. They have a well documented api that doesnt require much setup. Just some encrypting of API keys and installation of there gems which work in nicely with ActiveStorage in Rails. It provides not only storage but some great image manipulation options aswell.
 
 **Stripe -**
 
